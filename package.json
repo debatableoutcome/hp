@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@nuxtjs/storybook": "^8.1.5",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "nuxt": "^3.12.4",
+    "sass": "^1.77.8",
+    "vue": "latest"
+  }
+}

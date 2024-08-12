@@ -1,0 +1,10 @@
+.button {
+  &.primary {
+    background-color: blue;
+    color: white;
+  }
+  &.secondary {
+    background-color: gray;
+    color: black;
+  }
+}
