@@ -13,6 +13,8 @@
 <script setup>
   const headerData = {
     logo: '/icons/logo.svg',
+    select: '/icons/burger.svg',
+    close: '/icons/close.svg',
     nav: [
       { text: 'About us', href: '/about/' },
       { text: 'Services', href: '/services/' },

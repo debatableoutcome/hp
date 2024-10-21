@@ -1,0 +1,23 @@
+.select select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select select {
+  appearance: none;
+  padding-right: 2rem;
+}

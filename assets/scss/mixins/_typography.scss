@@ -44,3 +44,13 @@
     font-size: rem(18);
   }
 }
+
+@mixin text-header {
+  font-size: rem(16);
+  line-height: 1.5;
+  font-weight: 400;
+  @include media-breakpoint-up(lg) {
+    line-height: 1.2;
+    font-size: rem(20);
+  }
+}

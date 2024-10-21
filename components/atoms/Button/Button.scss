@@ -1,10 +1,21 @@
 .button {
-  &.primary {
-    background-color: blue;
-    color: white;
-  }
-  &.secondary {
-    background-color: gray;
-    color: black;
+  @include buttonReset;
+  @include text-header;
+  border-radius: rem(16);
+  padding: rem(20) rem(35);
+  width: rem(231);
+  height: rem(68);
+  &--white {
+    @include text-header;
+
+    border-radius: rem(48);
+    height: rem(40);
+    background-color: $color-white;
+    color: $color-black;
+
+    @include media-breakpoint-up(md) {
+      padding: rem(11) rem(23);
+      height: rem(56);
+    }
   }
 }

@@ -1,24 +1,23 @@
 <template>
   <header class="header">
-    <div class="container">
+    <div class="header__container container">
       <div class="header__logo">
         <img :src="logo" alt="Logo" />
       </div>
 
       <nav class="header__nav-desktop">
-        <ul>
+        <ul class="header__nav-desktop-list">
           <li v-for="(item, index) in nav" :key="index">
             <a :href="item.href">{{ item.text }}</a>
           </li>
         </ul>
+        <AtomsButton class="header__button" v-bind="action" />
       </nav>
 
-      <button class="header__button">
-        {{ action.text }}
-      </button>
-
       <div class="header__nav-icon-container" @click="toggleMobileMenu">
-        <span class="header__nav-icon"></span>
+        <span class="header__nav-icon" :class="{ open: isMobileMenuOpen }">
+          <img :src="isMobileMenuOpen ? close : select" alt="menu" />
+        </span>
       </div>
 
       <nav class="header__nav-mobile" v-if="isMobileMenuOpen">
@@ -41,6 +40,8 @@
 
   const props = defineProps({
     logo: String,
+    select: String,
+    close: String,
     nav: Array,
     action: Object,
   });
@@ -53,5 +54,5 @@
 </script>
 
 <style lang="scss">
-@use 'Header';
+  @import 'Header';
 </style>

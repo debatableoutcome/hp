@@ -11,3 +11,17 @@ body {
   line-height: 1.2;
   color: $color-black;
 }
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
