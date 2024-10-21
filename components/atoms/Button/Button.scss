@@ -1,21 +1,25 @@
 .button {
+  cursor: pointer;
   @include buttonReset;
   @include text-header;
+  border: 1px $color-black solid;
   border-radius: rem(16);
   padding: rem(20) rem(35);
-  width: rem(231);
-  height: rem(68);
-  &--white {
-    @include text-header;
+  white-space: nowrap;
 
-    border-radius: rem(48);
-    height: rem(40);
+  &--white {
     background-color: $color-white;
     color: $color-black;
-
     @include media-breakpoint-up(md) {
-      padding: rem(11) rem(23);
-      height: rem(56);
+      // @include hover {
+      //   background-color: $color-black;
+      //   color: $color-white;
+      //   @include defaultTransition(background-color);
+      // }
+      &:hover {
+        background-color: red !important; // Цвет для проверки
+        color: blue !important; // Цвет для проверки
+      }
     }
   }
 }

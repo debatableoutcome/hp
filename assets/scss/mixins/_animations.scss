@@ -1,7 +1,5 @@
-@mixin defaultTransition(
-  $property: all,
-  $duration: 0.3s,
-  $timing: ease-in-out
-) {
-  transition: $property $duration $timing;
+@mixin defaultTransition($args...) {
+  transition-timing-function: $easing;
+  transition-duration: $timing;
+  transition-property: $args;
 }
