@@ -16,10 +16,14 @@
       //   color: $color-white;
       //   @include defaultTransition(background-color);
       // }
-      &:hover {
-        background-color: red !important; // Цвет для проверки
-        color: blue !important; // Цвет для проверки
-      }
     }
+  }
+
+  &--auto {
+    width: auto;
+  }
+
+  &--full-width {
+    width: 100%;
   }
 }

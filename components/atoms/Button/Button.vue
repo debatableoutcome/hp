@@ -38,6 +38,7 @@
     return {
       btn: true,
       [`btn--${props.theme}`]: props.theme,
+      [`btn--${props.size}`]: props.size,
     };
   });
 </script>
