@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: process.env.STORYBOOK ? ['@nuxtjs/storybook'] : [],
-  css: ['@/assets/scss/main.scss'], // Global CSS import
+  css: ['@/assets/scss/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
