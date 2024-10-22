@@ -1,4 +1,5 @@
-.button {
+.btn {
+  $b: &;
   cursor: pointer;
   @include buttonReset;
   @include text-header;
@@ -11,14 +12,26 @@
     background-color: $color-white;
     color: $color-black;
     @include media-breakpoint-up(md) {
-      // @include hover {
-      //   background-color: $color-black;
-      //   color: $color-white;
-      //   @include defaultTransition(background-color);
-      // }
+      @include hover {
+        background-color: $color-black;
+        color: $color-white;
+        @include defaultTransition(background-color);
+      }
     }
   }
 
+  &--black {
+    background-color: $color-black;
+    color: $color-white;
+    @include media-breakpoint-up(md) {
+      @include hover {
+        background-color: $color-white;
+        color: $color-black;
+
+        @include defaultTransition(background-color);
+      }
+    }
+  }
   &--auto {
     width: auto;
   }

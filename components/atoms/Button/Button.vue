@@ -1,5 +1,5 @@
 <template>
-  <component :is="componentType" :class="classes" class="button">
+  <component :is="componentType" :class="classes" class="btn">
     <span v-if="text" class="btn__text">{{ text }}</span>
   </component>
 </template>

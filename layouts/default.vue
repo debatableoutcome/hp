@@ -1,6 +1,10 @@
 <template>
   <header>
-    <OrganismsHeader v-if="headerData" v-bind="headerData" />
+    <OrganismsHeader
+      v-if="headerData"
+      v-bind="headerData"
+      class="pb-40 pb-md-70"
+    />
   </header>
 
   <main>

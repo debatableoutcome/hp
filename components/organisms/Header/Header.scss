@@ -28,11 +28,14 @@
     top: rem(80);
     left: rem(20);
     width: 80%;
-    height: auto;
+    padding-bottom: rem(40);
     background-color: $color-white;
     transform: translateX(150%);
     z-index: 100;
     @include defaultTransition(transform, opacity);
+
+    border-bottom-right-radius: rem(16);
+    border-bottom-left-radius: rem(16);
 
     &--open {
       transform: translateX(0);
