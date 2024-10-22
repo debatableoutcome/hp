@@ -1,0 +1,12 @@
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &.focus-visible {
+      @content;
+    }
+  }
+
+  &.focus-visible {
+    @content;
+  }
+}

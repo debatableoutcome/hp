@@ -1,10 +1,42 @@
-.button {
-  &.primary {
-    background-color: blue;
-    color: white;
+.btn {
+  $b: &;
+  cursor: pointer;
+  @include buttonReset;
+  @include text-header;
+  border: 1px $color-black solid;
+  border-radius: rem(16);
+  padding: rem(20) rem(35);
+  white-space: nowrap;
+
+  &--white {
+    background-color: $color-white;
+    color: $color-black;
+    @include media-breakpoint-up(md) {
+      @include hover {
+        background-color: $color-black;
+        color: $color-white;
+        @include defaultTransition(background-color);
+      }
+    }
   }
-  &.secondary {
-    background-color: gray;
-    color: black;
+
+  &--black {
+    background-color: $color-black;
+    color: $color-white;
+    @include media-breakpoint-up(md) {
+      @include hover {
+        background-color: $color-white;
+        color: $color-black;
+
+        @include defaultTransition(background-color);
+      }
+    }
+  }
+  &--auto {
+    width: auto;
+  }
+
+  &--full-width {
+    width: 100%;
   }
 }

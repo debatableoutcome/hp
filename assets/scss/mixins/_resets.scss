@@ -1,0 +1,11 @@
+@mixin buttonReset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin listReset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,29 @@
+// html {
+//   font-size: 16px;
+
+//   @media (max-width: 430px) {
+//     font-size: 14px;
+//   }
+// }
+
+$scale-points: (
+  (320px, 14px),
+  (370px, 14.5px),
+  (420px, 15px),
+  (470px, 15.5px),
+  (520px, 16px),
+  (1024px, 16px)
+);
+
+html {
+  font-size: 16px;
+
+  @each $point in $scale-points {
+    $breakpoint: nth($point, 1);
+    $font-size: nth($point, 2);
+
+    @media (min-width: $breakpoint) {
+      font-size: $font-size;
+    }
+  }
+}

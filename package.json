@@ -14,8 +14,9 @@
   "dependencies": {
     "@nuxtjs/storybook": "^8.1.5",
     "@vitejs/plugin-vue": "^5.1.2",
+    "focus-visible": "^5.2.1",
     "nuxt": "^3.12.4",
-    "sass": "^1.77.8",
+    "sass": "^1.80.2",
     "vue": "latest"
   }
 }

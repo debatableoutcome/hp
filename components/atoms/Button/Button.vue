@@ -1,14 +1,45 @@
 <template>
-  <button class="button" :class="type">{{ label }}</button>
+  <component :is="componentType" :class="classes" class="btn">
+    <span v-if="text" class="btn__text">{{ text }}</span>
+  </component>
 </template>
 
 <script setup>
-  defineProps({
-    label: String,
-    type: {
+  const AtomsLink = resolveComponent('AtomsLink');
+
+  const props = defineProps({
+    href: {
       type: String,
-      default: 'primary',
     },
+    text: {
+      type: String,
+    },
+    theme: {
+      type: String,
+      default: 'white',
+      validator: function (value) {
+        return ['white', 'black'].indexOf(value) !== -1;
+      },
+    },
+    size: {
+      type: String,
+      default: 'auto',
+      validator: function (value) {
+        return ['auto', 'full-width'].indexOf(value) !== -1;
+      },
+    },
+  });
+
+  const componentType = computed(() => {
+    return props.href ? AtomsLink : 'button';
+  });
+
+  const classes = computed(() => {
+    return {
+      btn: true,
+      [`btn--${props.theme}`]: props.theme,
+      [`btn--${props.size}`]: props.size,
+    };
   });
 </script>
 
