@@ -17,7 +17,7 @@
     width: rem(48);
     height: rem(48);
     margin-bottom: rem(32);
-
+    filter: grayscale(100%);
     @include media-breakpoint-up(md) {
       width: rem(88);
       height: rem(88);
