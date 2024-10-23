@@ -3,7 +3,7 @@
     <OrganismsHeader
       v-if="headerData"
       v-bind="headerData"
-      class="mb-32 mb-md-56"
+      class="mb-32 mb-md-64"
     />
   </header>
 

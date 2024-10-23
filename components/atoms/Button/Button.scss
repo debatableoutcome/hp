@@ -2,11 +2,15 @@
   $b: &;
   cursor: pointer;
   @include buttonReset;
-  @include text-header;
+  @include text-button;
   border: 1px $color-black solid;
   border-radius: rem(16);
   padding: rem(20) rem(35);
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   &--white {
     background-color: $color-white;

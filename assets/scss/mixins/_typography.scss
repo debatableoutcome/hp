@@ -54,3 +54,11 @@
     font-size: rem(20);
   }
 }
+
+@mixin text-button {
+  font-size: rem(20);
+  line-height: 1.4;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(20);
+  }
+}
