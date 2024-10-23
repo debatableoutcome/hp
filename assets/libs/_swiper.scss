@@ -1,0 +1,33 @@
+@import 'swiper/css/bundle';
+
+.swiper-pagination {
+  display: flex;
+  gap: 0 rem(8);
+  bottom: auto !important;
+  top: auto !important;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  margin: 0 !important;
+  background-color: $color-black !important;
+  opacity: 1 !important;
+  @include defaultTransition(width, background-color, border-radius);
+
+  &.swiper-pagination-bullet-active {
+    background-color: $color-black !important;
+    border-radius: rem(8) !important;
+    width: rem(43) !important;
+  }
+
+  @at-root .swiper-pagination.dark & {
+    background-color: rgba($color-white, 0.4) !important;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-white !important;
+    }
+  }
+}

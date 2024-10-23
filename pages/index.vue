@@ -1,5 +1,10 @@
 <template>
-  <OrganismsHero v-bind="heroData" class="mb-56 mb-md-70" />
+  <OrganismsHero v-if="heroData" v-bind="heroData" class="mb-56 mb-md-70" />
+  <SlidersSliderLogos
+    v-if="sliderLogosData"
+    v-bind="sliderLogosData"
+    class="mb-56 mb-md-70"
+  />
 </template>
 
 <script setup>
@@ -15,6 +20,15 @@
       href: 'https://www.figma.com/design/sXV4hIbkvKIyYJCe3oUlPM/Positivus-Landing-Page-Design-(Community)?node-id=330-762&node-type=frame&t=yqFWfCGOjgc7VjrU-0',
     },
   };
-</script>
 
-<style scoped></style>
+  const sliderLogosData = {
+    items: [
+      { icon: 'logo-amazon', alt: 'Amazon Logo' },
+      { icon: 'logo-dribble', alt: 'Dribble Logo' },
+      { icon: 'logo-hubspot', alt: 'Hubspot Logo' },
+      { icon: 'logo-notion', alt: 'Notion Logo' },
+      { icon: 'logo-netflix', alt: 'Netflix Logo' },
+      { icon: 'logo-zoom', alt: 'Zoom Logo' },
+    ],
+  };
+</script>
