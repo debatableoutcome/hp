@@ -1,5 +1,5 @@
 <template>
-  <OrganismsHero v-bind="heroData" class="mb-md-70 mb-40" />
+  <OrganismsHero v-bind="heroData" class="mb-56 mb-md-70" />
 </template>
 
 <script setup>

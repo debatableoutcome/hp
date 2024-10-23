@@ -1,9 +1,10 @@
 .header {
+  border: 1px solid #e43f3f;
   @include text-header;
   min-width: rem(360);
 
   @include media-breakpoint-up(md) {
-    padding-top: rem(40);
+    margin-top: rem(40);
   }
 
   &__container {
@@ -25,10 +26,10 @@
 
   &__nav-wrapper {
     position: absolute;
-    top: rem(80);
+    top: rem(78);
     left: rem(20);
-    width: 80%;
-    padding-bottom: rem(40);
+    width: 100%;
+
     background-color: $color-white;
     transform: translateX(150%);
     z-index: 100;

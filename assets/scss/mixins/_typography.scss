@@ -1,6 +1,6 @@
 @mixin h1 {
   font-size: rem(43);
-  line-height: 1.2;
+  line-height: 1.3;
   font-weight: 500;
 
   @include media-breakpoint-up(lg) {
@@ -50,7 +50,7 @@
   line-height: 1.5;
   font-weight: 400;
   @include media-breakpoint-up(lg) {
-    line-height: 1.2;
+    line-height: 1.4;
     font-size: rem(20);
   }
 }
