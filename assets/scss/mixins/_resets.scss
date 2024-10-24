@@ -9,3 +9,18 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+}

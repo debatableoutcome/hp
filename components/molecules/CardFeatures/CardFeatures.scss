@@ -1,0 +1,50 @@
+.card-features {
+  border: 1px $color-black solid;
+
+  border-radius: rem(40);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: rem(50);
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    @include h3;
+    grid-column: 1 / -1;
+
+    @include media-breakpoint-up(md) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &__action {
+    grid-column: 1;
+    @include media-breakpoint-up(md) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  &__image {
+    grid-column: 2;
+    @include media-breakpoint-up(md) {
+      grid-row: 1 / span 2;
+    }
+  }
+
+  &--gray {
+    background-color: $color-gray;
+  }
+  &--black {
+    background-color: $color-black;
+  }
+  &--neon-green {
+    background-color: $color-neon-green;
+  }
+}

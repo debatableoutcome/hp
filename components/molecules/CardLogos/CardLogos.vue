@@ -1,6 +1,6 @@
 <template>
-  <div v-if="icon" class="card-logo">
-    <AtomsIcon :icon="icon" class="card-logo__icon" />
+  <div v-if="icon" class="card-logos">
+    <AtomsIcon :icon="icon" class="card-logos__icon" />
   </div>
 </template>
 
@@ -13,5 +13,5 @@
 </script>
 
 <style lang="scss">
-  @import 'CardLogo';
+  @import 'CardLogos';
 </style>

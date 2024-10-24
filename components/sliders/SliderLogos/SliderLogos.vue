@@ -8,7 +8,7 @@
             class="slider-logos__slide swiper-slide"
             :key="i"
           >
-            <MoleculesCardLogo
+            <MoleculesCardLogos
               v-if="item"
               v-bind="item"
               class="slider-logos__card"

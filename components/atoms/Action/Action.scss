@@ -1,0 +1,19 @@
+.action {
+  &__wrapper {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: flex-start;
+      gap: rem(15);
+    }
+  }
+  &__text {
+    @include text-header;
+  }
+  a {
+    @include link-reset;
+  }
+
+  &--white {
+    color: $color-white;
+  }
+}

@@ -4,11 +4,13 @@
 
     <div class="list-features__cards">
       <MoleculesCardFeatures
-        v-for="(feature, index) in features"
+        v-for="(item, index) in items"
         :key="index"
-        :title="feature.title"
-        :action="feature.action"
-        :image="feature.image"
+        :title="item.title"
+        :action="item.action"
+        :image="item.image"
+        :theme="item.theme"
+        class="list-features__card"
       />
     </div>
   </section>
@@ -18,17 +20,19 @@
   const props = defineProps({
     title: {
       type: String,
-      required: true,
     },
+
     text: {
       type: String,
       required: true,
     },
-    features: {
+    items: {
       type: Array,
       required: true,
     },
   });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  @import 'ListFeatures';
+</style>

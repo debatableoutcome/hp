@@ -43,73 +43,79 @@
     items: [
       {
         title: 'Search engine optimization',
+        theme: 'gray',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: 'round-arrow-up-right',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-01.png',
           alt: 'image',
         },
       },
       {
         title: 'Pay-per-click advertising',
+        theme: 'neon-green',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: 'round-arrow-up-right',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-02.png',
           alt: 'image',
         },
       },
       {
         title: 'Social Media Marketing',
+        theme: 'black',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: 'round-arrow-up-right',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-03.png',
           alt: 'image',
         },
       },
       {
         title: 'Email Marketing',
+        theme: 'gray',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: 'round-arrow-up-right',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-04.png',
           alt: 'image',
         },
       },
       {
         title: 'Content Creation',
+        theme: 'neon-green',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: 'round-arrow-up-right',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-05.png',
           alt: 'image',
         },
       },
       {
         title: 'Analytics and tracking',
+        theme: 'black',
         action: {
-          icon: '/assets/icons/arrow-up-right.svg',
+          icon: '/assets/icons/round-arrow-up-right.svg',
           text: 'Learn more',
           href: '/',
         },
         image: {
-          src: '/tmp/features/image-01.jpg',
+          src: '/tmp/features/image-06.png',
           alt: 'image',
         },
       },

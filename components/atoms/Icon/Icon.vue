@@ -7,6 +7,8 @@
     <IconNotion v-if="icon === 'logo-notion'" />
     <IconNetflix v-if="icon === 'logo-netflix'" />
     <IconZoom v-if="icon === 'logo-zoom'" />
+    <IconArrowUpRight v-if="icon === 'arrow-up-right'" />
+    <IconRoundArrowUpRight v-if="icon === 'round-arrow-up-right'" />
   </span>
   <span v-else :class="classes">
     <slot></slot>
@@ -20,6 +22,8 @@
   import IconNotion from '@/assets/icons/logo-notion.svg';
   import IconNetflix from '@/assets/icons/logo-netflix.svg';
   import IconZoom from '@/assets/icons/logo-zoom.svg';
+  import IconArrowUpRight from '@/assets/icons/arrow-up-right.svg';
+  import IconRoundArrowUpRight from '@/assets/icons/round-arrow-up-right.svg';
 
   const props = defineProps({
     icon: String,
