@@ -16,6 +16,11 @@
             />
           </div>
         </div>
+
+        <div
+          ref="pagination"
+          class="slider-logos__pagination swiper-pagination"
+        ></div>
       </div>
     </div>
   </section>
@@ -23,7 +28,7 @@
 
 <script setup>
   import Swiper from 'swiper';
-
+  import { Pagination } from 'swiper/modules';
   const props = defineProps({
     items: {
       type: Array,
@@ -32,11 +37,17 @@
 
   const slider = ref(null);
   const swiper = ref(null);
+  const pagination = ref(null);
 
   function initSlider() {
     slider.value = new Swiper(swiper.value, {
+      modules: [Pagination],
       slidesPerView: 'auto',
       simulateTouch: false,
+      pagination: {
+        el: pagination.value,
+        clickable: true,
+      },
     });
   }
 

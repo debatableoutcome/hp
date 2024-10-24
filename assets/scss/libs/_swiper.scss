@@ -13,7 +13,7 @@
 
 .swiper-pagination-bullet {
   margin: 0 !important;
-  background-color: $color-black !important;
+  background-color: $color-neon-green !important;
   opacity: 1 !important;
   @include defaultTransition(width, background-color, border-radius);
 
@@ -21,13 +21,5 @@
     background-color: $color-black !important;
     border-radius: rem(8) !important;
     width: rem(43) !important;
-  }
-
-  @at-root .swiper-pagination.dark & {
-    background-color: rgba($color-white, 0.4) !important;
-
-    &.swiper-pagination-bullet-active {
-      background-color: $color-white !important;
-    }
   }
 }

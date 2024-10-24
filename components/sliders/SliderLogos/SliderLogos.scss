@@ -1,8 +1,6 @@
 @import 'swiper/css/bundle';
 
 .slider-logos {
-  height: 70px;
-
   $root: &;
   &__container {
   }
@@ -24,9 +22,8 @@
   }
 
   &__slide {
-    max-width: 100%;
+    height: rem(300);
     padding: 0 rem(8);
-    height: auto;
 
     @include media-breakpoint-up(lg) {
       max-width: calc(100% / 12 * 2);
@@ -36,7 +33,7 @@
       padding: 0 rem(18);
     }
 
-    .card-icon {
+    .card-logo {
       height: 100%;
     }
   }
@@ -46,22 +43,20 @@
     // @include fadeInChild($delay);
   }
 
-  &__nav {
+  &__pagination {
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    margin-top: rem(32);
+    justify-content: center;
+    margin-top: rem(15);
     // @include fadeIn(0.5s);
 
     @include media-breakpoint-only(md) {
       margin-top: rem(24);
     }
-    @include media-breakpoint-down(md) {
-      height: rem(8);
-    }
   }
 
   &__pagination {
+    margin-top: rem(32);
     justify-content: center;
 
     @include media-breakpoint-up(lg) {
@@ -69,12 +64,6 @@
     }
     @include media-breakpoint-only(md) {
       justify-content: flex-end;
-    }
-  }
-
-  &__nav-arrows {
-    @include media-breakpoint-down(md) {
-      display: none;
     }
   }
 }
