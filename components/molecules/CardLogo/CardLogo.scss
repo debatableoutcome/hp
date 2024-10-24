@@ -7,7 +7,6 @@
   justify-content: center;
 
   @include media-breakpoint-up(md) {
-    padding: rem(16);
   }
 
   & > :last-child {
@@ -19,8 +18,8 @@
     height: rem(200);
     filter: grayscale(100%);
     @include media-breakpoint-up(md) {
-      width: rem(88);
-      height: rem(88);
+      width: rem(130);
+      height: rem(130);
       margin-bottom: rem(80);
     }
   }

@@ -1,0 +1,22 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: rem(40);
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: rem(80);
+    gap: rem(40);
+  }
+
+  &__title {
+    @include h2;
+    @include highlighted;
+  }
+  &__text {
+    @include p;
+  }
+}

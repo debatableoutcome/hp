@@ -1,0 +1,12 @@
+@mixin highlighted(
+  $background-color: $color-neon-green,
+  $border-radius: 5px,
+  $padding-vertical: 0.1rem,
+  $padding-horizontal: 0.4rem
+) {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  padding: $padding-vertical $padding-horizontal;
+  display: inline-block;
+  line-height: 1.2;
+}

@@ -2,6 +2,7 @@
 
 .slider-logos {
   $root: &;
+
   &__container {
   }
   &__swiper {
@@ -22,7 +23,6 @@
   }
 
   &__slide {
-    height: rem(300);
     padding: 0 rem(8);
 
     @include media-breakpoint-up(lg) {
@@ -45,25 +45,12 @@
 
   &__pagination {
     position: relative;
+    margin-top: rem(32);
     display: flex;
     justify-content: center;
-    margin-top: rem(15);
-    // @include fadeIn(0.5s);
 
-    @include media-breakpoint-only(md) {
-      margin-top: rem(24);
-    }
-  }
-
-  &__pagination {
-    margin-top: rem(32);
-    justify-content: center;
-
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: none;
-    }
-    @include media-breakpoint-only(md) {
-      justify-content: flex-end;
     }
   }
 }

@@ -1,8 +1,13 @@
 <template>
-  <OrganismsHero v-if="heroData" v-bind="heroData" class="mb-56 mb-md-70" />
+  <OrganismsHero v-if="heroData" v-bind="heroData" class="mb-56 mb-md-0" />
   <SlidersSliderLogos
     v-if="sliderLogosData"
     v-bind="sliderLogosData"
+    class="mb-56 mb-md-104"
+  />
+  <OrganismsListFeatures
+    v-if="listFeaturesData"
+    v-bind="listFeaturesData"
     class="mb-56 mb-md-70"
   />
 </template>
@@ -29,6 +34,85 @@
       { icon: 'logo-notion', alt: 'Notion Logo' },
       { icon: 'logo-netflix', alt: 'Netflix Logo' },
       { icon: 'logo-zoom', alt: 'Zoom Logo' },
+    ],
+  };
+
+  const listFeaturesData = {
+    title: 'Services',
+    text: 'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:',
+    items: [
+      {
+        title: 'Search engine optimization',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
+      {
+        title: 'Pay-per-click advertising',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
+      {
+        title: 'Social Media Marketing',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
+      {
+        title: 'Email Marketing',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
+      {
+        title: 'Content Creation',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
+      {
+        title: 'Analytics and tracking',
+        action: {
+          icon: '/assets/icons/arrow-up-right.svg',
+          text: 'Learn more',
+          href: '/',
+        },
+        image: {
+          src: '/tmp/features/image-01.jpg',
+          alt: 'image',
+        },
+      },
     ],
   };
 </script>
