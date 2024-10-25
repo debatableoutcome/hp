@@ -1,0 +1,20 @@
+.card-cases {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: rem(20);
+
+  &__text {
+    @include p;
+    color: $color-white;
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+  }
+  &__action {
+  }
+}

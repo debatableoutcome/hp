@@ -25,7 +25,14 @@
       type: String,
       default: 'black',
       validator: function (value) {
-        return ['black', 'white'].indexOf(value) !== -1;
+        return ['black', 'white', 'neon-green'].indexOf(value) !== -1;
+      },
+    },
+    iconPlacement: {
+      type: String,
+      default: 'icon-left',
+      validator: function (value) {
+        return ['icon-left', 'icon-right'].indexOf(value) !== -1;
       },
     },
   });
@@ -34,6 +41,7 @@
     return {
       action: true,
       [`action--${props.theme}`]: props.theme,
+      [`action--${props.iconPlacement}`]: props.iconPlacement,
     };
   });
 </script>

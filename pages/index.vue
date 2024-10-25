@@ -12,6 +12,12 @@
   />
 
   <OrganismsCTA v-if="CTAData" v-bind="CTAData" class="mb-56 mb-md-70" />
+
+  <SlidersSliderCases
+    v-if="sliderCasesData"
+    v-bind="sliderCasesData"
+    class="mb-56 mb-md-104"
+  />
 </template>
 
 <script setup>
@@ -141,5 +147,36 @@
       text: 'Get your free proposal',
       href: 'https://www.figma.com/design/sXV4hIbkvKIyYJCe3oUlPM/Positivus-Landing-Page-Design-(Community)?node-id=330-762&node-type=frame&t=yqFWfCGOjgc7VjrU-0',
     },
+  };
+
+  const sliderCasesData = {
+    title: 'Case Studies',
+    text: 'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
+    items: [
+      {
+        text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales',
+        action: {
+          icon: 'arrow-up-right',
+          text: 'Learn more',
+          href: '/',
+        },
+      },
+      {
+        text: 'For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.',
+        action: {
+          icon: 'arrow-up-right',
+          text: 'Learn more',
+          href: '/',
+        },
+      },
+      {
+        text: 'For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.',
+        action: {
+          icon: 'arrow-up-right',
+          text: 'Learn more',
+          href: '/',
+        },
+      },
+    ],
   };
 </script>

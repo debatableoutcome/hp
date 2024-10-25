@@ -28,4 +28,22 @@
       color: $color-white;
     }
   }
+  &--neon-green {
+    #{$b}__text {
+      color: $color-neon-green;
+    }
+    #{$b}__icon {
+      margin-top: rem(8);
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+  &--icon-right {
+    #{$b}__wrapper {
+      flex-direction: row-reverse;
+    }
+    #{$b}__text {
+      display: block;
+    }
+  }
 }

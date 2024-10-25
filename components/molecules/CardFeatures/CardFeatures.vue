@@ -51,10 +51,6 @@
       [`card-features--${props.theme}`]: props.theme,
     };
   });
-
-  onMounted(() => {
-    console.log('Theme prop:', props.theme);
-  });
 </script>
 
 <style lang="scss">

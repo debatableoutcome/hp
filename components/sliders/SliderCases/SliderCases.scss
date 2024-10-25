@@ -1,0 +1,56 @@
+@import 'swiper/css/bundle';
+
+.slider-cases {
+  $root: &;
+
+  &__container {
+  }
+  &__swiper {
+    background-color: $color-black;
+    border-radius: 40px;
+    // margin-left: rem(-8);
+    // margin-right: rem(-8);
+    padding: rem(70) rem(60) rem(70) rem(60);
+    @include media-breakpoint-only(md) {
+      // margin-left: rem(-18);
+      // margin-right: rem(-18);
+    }
+  }
+
+  &__wrapper {
+    background-color: $color-black;
+    @include media-breakpoint-only(md) {
+      max-width: calc(100% - #{rem(18)});
+      width: 100%;
+    }
+  }
+
+  &__slide {
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+      width: calc((100% / 3) - 18px);
+
+      &:not(:last-child) {
+        border-right: 1px $color-white solid;
+        margin-right: rem(55);
+      }
+    }
+  }
+
+  &__card {
+    // $delay: calc(0.4s + var(--item-index) * 0.1s);
+    // @include fadeInChild($delay);
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: rem(32);
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
