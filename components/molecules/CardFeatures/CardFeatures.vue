@@ -1,14 +1,20 @@
 <template>
   <div class="card-features" :class="classes">
     <div class="card-features__content">
-      <h3 class="card-features__title">{{ title }}</h3>
-
+      <div class="card-features__title">
+        <h3 v-if="titleUpper" class="card-features__title-upper">
+          {{ titleUpper }}
+        </h3>
+        <h3 v-if="titleLower" class="card-features__title-lower">
+          {{ titleLower }}
+        </h3>
+      </div>
       <AtomsImage v-if="image" v-bind="image" class="card-features__image" />
       <AtomsAction
         v-if="action"
         v-bind="{
           ...action,
-          color: props.theme === 'black' ? 'white' : 'black',
+          theme: props.theme === 'black' ? 'white' : props.theme,
         }"
         class="card-features__action"
       />
@@ -18,7 +24,10 @@
 
 <script setup>
   const props = defineProps({
-    title: {
+    titleUpper: {
+      type: String,
+    },
+    titleLower: {
       type: String,
     },
     theme: {

@@ -6,7 +6,8 @@
       <MoleculesCardFeatures
         v-for="(item, index) in items"
         :key="index"
-        :title="item.title"
+        :titleUpper="item.titleUpper"
+        :titleLower="item.titleLower"
         :action="item.action"
         :image="item.image"
         :theme="item.theme"

@@ -10,11 +10,14 @@
     padding: rem(50);
     @include media-breakpoint-up(md) {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 110px;
     }
   }
 
-  &__title {
+  &__title-upper,
+  &__title-lower {
     @include h3;
+    @include highlighted;
     grid-column: 1 / -1;
 
     @include media-breakpoint-up(md) {
@@ -26,15 +29,18 @@
   &__action {
     grid-column: 1;
     @include media-breakpoint-up(md) {
+      align-self: flex-end;
       grid-column: 1;
       grid-row: 2;
     }
   }
 
   &__image {
+    margin-left: rem(50);
     grid-column: 2;
     @include media-breakpoint-up(md) {
       grid-row: 1 / span 2;
+      width: 85%;
     }
   }
 

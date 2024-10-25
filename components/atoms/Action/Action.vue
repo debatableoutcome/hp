@@ -1,10 +1,9 @@
 <template>
-  <div class="action">
-    <AtomsLink v-if="href" :href="href" :class="classes" class="action__link">
+  <div class="action" :class="classes">
+    <AtomsLink v-if="href" :href="href" class="action__link">
       <div class="action__wrapper">
-        <span v-if="icon" class="action__icon">
-          <AtomsIcon :icon="icon" />
-        </span>
+        <AtomsIcon v-if="icon" :icon="icon" class="action__icon" />
+
         <span v-if="text" class="action__text">{{ text }}</span>
       </div>
     </AtomsLink>
@@ -34,7 +33,7 @@
   const classes = computed(() => {
     return {
       action: true,
-      [`btn--${props.theme}`]: props.theme,
+      [`action--${props.theme}`]: props.theme,
     };
   });
 </script>

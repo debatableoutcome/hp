@@ -1,4 +1,5 @@
 .action {
+  $b: &;
   &__wrapper {
     @include media-breakpoint-up(md) {
       display: flex;
@@ -8,12 +9,23 @@
   }
   &__text {
     @include text-header;
+    @include media-breakpoint-up(md) {
+      margin-top: rem(4);
+    }
   }
   a {
     @include link-reset;
   }
+  &__icon {
+    @include media-breakpoint-up(md) {
+      width: rem(41);
+      height: rem(41);
+    }
+  }
 
   &--white {
-    color: $color-white;
+    #{$b}__text {
+      color: $color-white;
+    }
   }
 }

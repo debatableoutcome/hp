@@ -9,6 +9,7 @@
     <IconZoom v-if="icon === 'logo-zoom'" />
     <IconArrowUpRight v-if="icon === 'arrow-up-right'" />
     <IconRoundArrowUpRight v-if="icon === 'round-arrow-up-right'" />
+    <IconRoundArrowUpRightWhite v-if="icon === 'round-arrow-up-right-white'" />
   </span>
   <span v-else :class="classes">
     <slot></slot>
@@ -24,6 +25,7 @@
   import IconZoom from '@/assets/icons/logo-zoom.svg';
   import IconArrowUpRight from '@/assets/icons/arrow-up-right.svg';
   import IconRoundArrowUpRight from '@/assets/icons/round-arrow-up-right.svg';
+  import IconRoundArrowUpRightWhite from '@/assets/icons/round-arrow-up-right-white.svg';
 
   const props = defineProps({
     icon: String,
