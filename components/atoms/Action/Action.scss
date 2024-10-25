@@ -8,8 +8,10 @@
     }
   }
   &__text {
-    @include text-header;
+    display: none;
     @include media-breakpoint-up(md) {
+      display: block;
+      @include text-header;
       margin-top: rem(4);
     }
   }
@@ -17,10 +19,8 @@
     @include link-reset;
   }
   &__icon {
-    @include media-breakpoint-up(md) {
-      width: rem(41);
-      height: rem(41);
-    }
+    width: rem(41);
+    height: rem(41);
   }
 
   &--white {

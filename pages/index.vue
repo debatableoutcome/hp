@@ -8,8 +8,10 @@
   <OrganismsListFeatures
     v-if="listFeaturesData"
     v-bind="listFeaturesData"
-    class="mb-56 mb-md-70"
+    class="mb-56 mb-md-104"
   />
+
+  <OrganismsCTA v-if="CTAData" v-bind="CTAData" class="mb-56 mb-md-70" />
 </template>
 
 <script setup>
@@ -126,5 +128,18 @@
         },
       },
     ],
+  };
+
+  const CTAData = {
+    title: 'Let’s make things happen',
+    text: 'Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.',
+    image: {
+      src: '/tmp/CTA.png',
+      alt: 'image',
+    },
+    action: {
+      text: 'Get your free proposal',
+      href: 'https://www.figma.com/design/sXV4hIbkvKIyYJCe3oUlPM/Positivus-Landing-Page-Design-(Community)?node-id=330-762&node-type=frame&t=yqFWfCGOjgc7VjrU-0',
+    },
   };
 </script>

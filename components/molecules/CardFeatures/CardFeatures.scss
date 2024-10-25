@@ -1,56 +1,81 @@
 .card-features {
+  $b: &;
   border: 1px $color-black solid;
-
   border-radius: rem(40);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 
   &__content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
     padding: rem(50);
+
     @include media-breakpoint-up(md) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 100px 110px;
     }
   }
 
+  &__title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title-upper,
   &__title-lower {
     @include h3;
     @include highlighted;
-    grid-column: 1 / -1;
-
-    @include media-breakpoint-up(md) {
-      grid-column: 1;
-      grid-row: 1;
-    }
+    display: inline-block;
   }
 
   &__action {
     grid-column: 1;
+    grid-row: 2;
+    align-self: flex-end;
+    padding-bottom: rem(4);
+
     @include media-breakpoint-up(md) {
-      align-self: flex-end;
+      padding-bottom: 0;
       grid-column: 1;
       grid-row: 2;
     }
   }
 
   &__image {
-    margin-left: rem(50);
     grid-column: 2;
+    grid-row: 2;
+    margin-left: rem(40);
+    width: rem(165);
+    height: rem(129);
+
     @include media-breakpoint-up(md) {
+      margin-left: rem(50);
       grid-row: 1 / span 2;
-      width: 85%;
+      width: rem(210);
+      height: rem(170);
     }
   }
 
   &--gray {
     background-color: $color-gray;
   }
+
   &--black {
     background-color: $color-black;
+    #{$b}__title-upper,
+    #{$b}__title-lower {
+      @include highlighted($color-gray);
+    }
   }
+
   &--neon-green {
     background-color: $color-neon-green;
+    #{$b}__title-upper,
+    #{$b}__title-lower {
+      @include highlighted($color-gray);
+    }
   }
 }

@@ -1,10 +1,12 @@
 .intro {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  justify-content: center;
+  text-align: center;
   margin-bottom: rem(40);
 
   @include media-breakpoint-up(md) {
+    width: 70%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -15,7 +17,16 @@
   &__title {
     @include h2;
     @include highlighted;
+    width: auto;
+    display: inline-block;
+    margin-bottom: rem(30);
+    align-self: center;
+
+    @include media-breakpoint-up(md) {
+      align-self: auto;
+    }
   }
+
   &__text {
     @include p;
   }
