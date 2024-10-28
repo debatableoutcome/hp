@@ -7,6 +7,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: rem(20);
+  padding: rem(42) rem(50);
 
   &__text {
     @include p;
@@ -16,5 +17,6 @@
     }
   }
   &__action {
+    width: 100%;
   }
 }

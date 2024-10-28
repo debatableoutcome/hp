@@ -10,9 +10,9 @@
   }
   &__text {
     display: none;
+    @include text-header;
     @include media-breakpoint-up(md) {
       display: block;
-      @include text-header;
       margin-top: rem(4);
     }
   }
@@ -36,10 +36,22 @@
   }
   &--icon-right {
     #{$b}__wrapper {
+      display: flex;
+      justify-content: flex-end;
       flex-direction: row-reverse;
+      gap: rem(15);
     }
     #{$b}__text {
+      @include text-regular;
       display: block;
+    }
+    #{$b}__icon {
+      width: rem(22);
+      height: rem(22);
+      @include media-breakpoint-up(md) {
+        width: rem(41);
+        height: rem(41);
+      }
     }
   }
 }

@@ -31,7 +31,8 @@
     max-width: 100%;
     background-color: $color-black;
     border-radius: 40px;
-    margin-right: rem(55);
+    margin-right: rem(25);
+    width: rem(370);
     @include media-breakpoint-up(md) {
       width: calc((100% / 3) - 18px);
 

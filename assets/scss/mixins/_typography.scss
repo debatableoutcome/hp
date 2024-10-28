@@ -62,3 +62,9 @@
     font-size: rem(20);
   }
 }
+
+@mixin text-regular {
+  font-size: rem(20);
+  line-height: 1.5;
+  font-weight: 400;
+}

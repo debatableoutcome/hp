@@ -48,6 +48,9 @@
     margin-top: rem(32);
     display: flex;
     justify-content: center;
+    .swiper-pagination {
+      position: static;
+    }
 
     @include media-breakpoint-up(md) {
       display: none;
