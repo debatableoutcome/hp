@@ -1,0 +1,18 @@
+.list-accordeons {
+  &__header {
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @include media-breakpoint-up(lg) {
+      gap: rem(30);
+      margin-bottom: rem(80);
+    }
+  }
+}

@@ -2,7 +2,7 @@
   $b: &;
 
   &__wrapper {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       justify-content: flex-start;
       gap: rem(15);
@@ -11,7 +11,7 @@
   &__text {
     display: none;
     @include text-header;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: block;
       margin-top: rem(4);
     }
@@ -48,9 +48,8 @@
     #{$b}__icon {
       width: rem(22);
       height: rem(22);
-      @include media-breakpoint-up(md) {
-        width: rem(41);
-        height: rem(41);
+      @include media-breakpoint-up(lg) {
+        margin-top: rem(6);
       }
     }
   }

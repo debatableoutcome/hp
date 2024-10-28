@@ -2,7 +2,7 @@
   @include text-header;
   min-width: rem(360);
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin-top: rem(40);
   }
 
@@ -18,7 +18,7 @@
     display: flex;
     cursor: pointer;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -41,7 +41,7 @@
       transform: translateX(0);
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       position: static;
       transform: none;
       background-color: transparent;
@@ -55,7 +55,7 @@
 
   &__nav {
     margin-bottom: rem(40);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
@@ -70,7 +70,7 @@
     flex-direction: column;
     @include listReset;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       flex-direction: row;
       padding-top: rem(2);
     }
@@ -78,7 +78,7 @@
     li {
       padding: rem(15) 0;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         padding-right: rem(40);
       }
 
@@ -90,7 +90,7 @@
   }
 
   &__logo {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       padding-right: rem(206);
     }
   }
@@ -98,7 +98,7 @@
   &__logo img {
     width: rem(144);
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: rem(219);
     }
   }

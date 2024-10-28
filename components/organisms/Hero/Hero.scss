@@ -1,6 +1,6 @@
 .hero {
   &__container {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       gap: rem(108);
     }
@@ -15,7 +15,7 @@
   }
   &__right {
     display: none;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: block;
       flex: 1;
     }
@@ -23,25 +23,25 @@
 
   &__title {
     @include h1;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: rem(35);
     }
   }
   &__text {
     @include text-header;
     margin-bottom: rem(54);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: rem(35);
     }
   }
   &__mobile-image {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
   &__image img {
     width: 100%;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: rem(600);
       height: rem(515);
     }
@@ -52,7 +52,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: 50%;
     }
   }

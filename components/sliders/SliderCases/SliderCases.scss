@@ -5,25 +5,25 @@
 
   &__header {
     margin-bottom: rem(40);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: rem(80);
     }
   }
 
   &__swiper {
-    // padding: rem(42) rem(50);
-    @include media-breakpoint-only(md) {
+    padding: rem(42) rem(50);
+
+    @include media-breakpoint-up(lg) {
       background-color: $color-black;
       border-radius: 40px;
-      padding: rem(70) rem(60) rem(70) rem(60);
+      padding: rem(70) rem(40) rem(72) rem(40);
     }
   }
 
   &__wrapper {
-    // background-color: $color-black;
-    @include media-breakpoint-only(md) {
-      max-width: calc(100% - #{rem(18)});
-      width: 100%;
+    @include media-breakpoint-only(lg) {
+      // max-width: calc(100% - #{rem(18)});
+      // width: 100%;
     }
   }
 
@@ -31,14 +31,18 @@
     max-width: 100%;
     background-color: $color-black;
     border-radius: 40px;
-    margin-right: rem(25);
-    width: rem(370);
-    @include media-breakpoint-up(md) {
-      width: calc((100% / 3) - 18px);
+    margin-right: rem(20);
+
+    @include media-breakpoint-up(lg) {
+      max-width: initial;
+      border-radius: initial;
+      width: calc((100% / 3) - 10px);
+      margin-right: rem(0);
+      padding-left: rem(20);
 
       &:not(:last-child) {
         border-right: 1px $color-white solid;
-        margin-right: rem(55);
+        margin-right: rem(35);
       }
     }
   }
@@ -54,7 +58,7 @@
     display: flex;
     justify-content: center;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }

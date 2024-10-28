@@ -15,7 +15,7 @@
   &--white {
     background-color: $color-white;
     color: $color-black;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include hover {
         background-color: $color-black;
         color: $color-white;
@@ -27,7 +27,7 @@
   &--black {
     background-color: $color-black;
     color: $color-white;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include hover {
         background-color: $color-white;
         color: $color-black;

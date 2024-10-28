@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -17,15 +17,16 @@
 
     align-self: center;
     margin-bottom: rem(30);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: 0;
+      margin-right: rem(40);
     }
   }
 
   &__text {
     @include p;
     text-align: center;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       text-align: left;
       width: 50%;
       align-self: flex-start;

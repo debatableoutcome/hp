@@ -10,6 +10,8 @@
     <IconArrowUpRight v-if="icon === 'arrow-up-right'" />
     <IconRoundArrowUpRight v-if="icon === 'round-arrow-up-right'" />
     <IconRoundArrowUpRightWhite v-if="icon === 'round-arrow-up-right-white'" />
+    <IconAccordeonClosed v-if="icon === 'accordeon-closed'" />
+    <IconAccordeonOpen v-if="icon === 'accordeon-open'" />
   </span>
   <span v-else :class="classes">
     <slot></slot>
@@ -26,6 +28,8 @@
   import IconArrowUpRight from '@/assets/icons/arrow-up-right.svg';
   import IconRoundArrowUpRight from '@/assets/icons/round-arrow-up-right.svg';
   import IconRoundArrowUpRightWhite from '@/assets/icons/round-arrow-up-right-white.svg';
+  import IconAccordeonClosed from '@/assets/icons/accordeon-closed.svg';
+  import IconAccordeonOpen from '@/assets/icons/accordeon-open.svg';
 
   const props = defineProps({
     icon: String,

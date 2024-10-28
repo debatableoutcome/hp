@@ -18,6 +18,11 @@
     v-bind="sliderCasesData"
     class="mb-56 mb-md-104"
   />
+  <OrganismsListAccordeons
+    v-if="listAccordeonsData"
+    v-bind="listAccordeonsData"
+    class="mb-56 mb-md-104"
+  />
 </template>
 
 <script setup>
@@ -176,6 +181,37 @@
           text: 'Learn more',
           href: '/',
         },
+      },
+    ],
+  };
+
+  const listAccordeonsData = {
+    title: 'Our Working Process',
+    text: 'Step-by-Step Guide to Achieving Your Business Goals',
+    items: [
+      {
+        title: 'Consultation',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+      {
+        title: 'Research and Strategy Development',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+      {
+        title: 'Implementation',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+      {
+        title: 'Monitoring and Optimization',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+      {
+        title: 'Reporting and Communication',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+      {
+        title: 'Continual Improvement',
+        text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
       },
     ],
   };

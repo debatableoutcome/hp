@@ -8,7 +8,7 @@
     flex-direction: column;
     gap: rem(20);
     padding: rem(50);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       gap: rem(26);
       width: 45%;
       padding: rem(60);
@@ -33,7 +33,7 @@
   &__image {
     display: none;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       position: absolute;
       right: rem(140);
       top: 50%;
