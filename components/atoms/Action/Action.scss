@@ -1,5 +1,6 @@
 .action {
   $b: &;
+
   &__wrapper {
     @include media-breakpoint-up(md) {
       display: flex;
@@ -31,11 +32,6 @@
   &--neon-green {
     #{$b}__text {
       color: $color-neon-green;
-    }
-    #{$b}__icon {
-      margin-top: rem(8);
-      width: rem(20);
-      height: rem(20);
     }
   }
   &--icon-right {

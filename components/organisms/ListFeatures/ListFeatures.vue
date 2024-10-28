@@ -1,6 +1,6 @@
 <template>
   <section class="list-features container">
-    <AtomsIntro :title="title" :text="text" />
+    <AtomsIntro :title="title" :text="text" class="list-features__header"/>
 
     <div class="list-features__cards">
       <MoleculesCardFeatures

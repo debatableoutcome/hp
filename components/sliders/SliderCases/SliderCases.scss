@@ -3,22 +3,24 @@
 .slider-cases {
   $root: &;
 
-  &__container {
+  &__header {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(80);
+    }
   }
+
   &__swiper {
-    background-color: $color-black;
-    border-radius: 40px;
-    // margin-left: rem(-8);
-    // margin-right: rem(-8);
-    padding: rem(70) rem(60) rem(70) rem(60);
+    // padding: rem(42) rem(50);
     @include media-breakpoint-only(md) {
-      // margin-left: rem(-18);
-      // margin-right: rem(-18);
+      background-color: $color-black;
+      border-radius: 40px;
+      padding: rem(70) rem(60) rem(70) rem(60);
     }
   }
 
   &__wrapper {
-    background-color: $color-black;
+    // background-color: $color-black;
     @include media-breakpoint-only(md) {
       max-width: calc(100% - #{rem(18)});
       width: 100%;
@@ -27,7 +29,9 @@
 
   &__slide {
     max-width: 100%;
-
+    background-color: $color-black;
+    border-radius: 40px;
+    margin-right: rem(55);
     @include media-breakpoint-up(md) {
       width: calc((100% / 3) - 18px);
 

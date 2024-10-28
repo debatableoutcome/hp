@@ -15,7 +15,12 @@
       }
     }
   }
-
+  &__header {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(80);
+    }
+  }
   &__card {
     @include media-breakpoint-up(md) {
       width: calc(50% - rem(20));
