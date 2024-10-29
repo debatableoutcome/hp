@@ -23,6 +23,11 @@
     v-bind="listAccordeonsData"
     class="mb-56 mb-md-104"
   />
+  <OrganismsListTeam
+    v-if="listTeamData"
+    v-bind="listTeamData"
+    class="mb-56 mb-md-104"
+  />
 </template>
 
 <script setup>
@@ -223,6 +228,96 @@
       {
         title: 'Continual Improvement',
         text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements',
+      },
+    ],
+  };
+  const listTeamData = {
+    header: {
+      title: 'Team',
+      text: 'Meet the skilled and experienced team behind our successful digital marketing strategies',
+    },
+
+    items: [
+      {
+        name: 'John Smith',
+        position: 'CEO and Founder',
+        text: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-01.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'Jane Doe',
+        position: 'Director of Operations',
+        text: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-02.png',
+          alt: 'image',
+        },
+      },
+
+      {
+        name: 'Michael Brown',
+        position: 'Senior SEO Specialist',
+        text: '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-03.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'Emily Johnson',
+        position: 'PPC Manager',
+        text: '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-04.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'Brian Williams',
+        position: 'Social Media Specialist',
+        text: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-05.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'Sarah Kim',
+        position: 'Content Creator',
+        text: '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-06.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'John Smith',
+        position: 'CEO and Founder',
+        text: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-01.png',
+          alt: 'image',
+        },
+      },
+      {
+        name: 'John Smith',
+        position: 'CEO and Founder',
+        text: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+        icon: 'linkedin',
+        image: {
+          src: '/tmp/team/team-04.png',
+          alt: 'image',
+        },
       },
     ],
   };
