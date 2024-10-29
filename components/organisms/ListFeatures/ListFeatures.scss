@@ -23,8 +23,7 @@
   }
   &__card {
     @include media-breakpoint-up(lg) {
-      // width: calc(50% - rem(20));
-      width: 45%;
+      width: calc(50% - rem(20));
     }
   }
 }

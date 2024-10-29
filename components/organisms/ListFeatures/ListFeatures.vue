@@ -1,6 +1,6 @@
 <template>
   <section class="list-features container">
-    <AtomsIntro :title="title" :text="text" class="list-features__header"/>
+    <AtomsIntro v-if="header" v-bind="header" class="list-features__header" />
 
     <div class="list-features__cards">
       <MoleculesCardFeatures
@@ -21,6 +21,9 @@
   const props = defineProps({
     title: {
       type: String,
+    },
+    header: {
+      type: Object,
     },
 
     text: {

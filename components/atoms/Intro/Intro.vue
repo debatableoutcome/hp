@@ -1,8 +1,15 @@
 <template>
   <div class="intro">
-    <h2 class="intro__title">{{ title }}</h2>
-
-    <p class="intro__text">{{ text }}</p>
+    <h2 v-if="title" class="intro__title" v-html="title"></h2>
+    <div v-if="titleUpper || titleLower" class="intro__header">
+      <h2 class="intro__title-upper">
+        {{ titleUpper }}
+      </h2>
+      <h2 class="intro__title-lower">
+        {{ titleLower }}
+      </h2>
+    </div>
+    <p v-if="text" class="intro__text" v-html="text"></p>
   </div>
 </template>
 
@@ -10,11 +17,15 @@
   const props = defineProps({
     title: {
       type: String,
-      required: true,
+    },
+    titleUpper: {
+      type: String,
+    },
+    titleLower: {
+      type: String,
     },
     text: {
       type: String,
-      required: true,
     },
   });
 </script>

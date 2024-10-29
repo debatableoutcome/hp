@@ -1,6 +1,6 @@
 <template>
   <section class="list-accordeons__container container">
-    <AtomsIntro :title="title" :text="text" class="list-accordeons__header" />
+    <AtomsIntro v-if="header" v-bind="header" class="list-accordeons__header" />
 
     <div class="list-accordeons__cards">
       <MoleculesCardAccordeons
@@ -16,13 +16,10 @@
 
 <script setup>
   const props = defineProps({
-    title: {
-      type: String,
+    header: {
+      type: Object,
     },
-    text: {
-      type: String,
-      required: true,
-    },
+
     items: {
       type: Array,
       required: true,

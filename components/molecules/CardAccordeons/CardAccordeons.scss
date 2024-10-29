@@ -4,45 +4,46 @@
   border-radius: rem(40);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: rem(38) rem(30) rem(38) rem(30);
+  padding: rem(30) rem(30) rem(30) rem(30);
   @include media-breakpoint-up(lg) {
-    padding: rem(41) rem(60) rem(41) rem(60);
+    padding: rem(41) rem(60) rem(10) rem(60);
   }
+
   &__info {
     display: flex;
     justify-content: flex-start;
+    gap: rem(36);
 
-    gap: rem(8);
-    margin-bottom: rem(20);
     @include media-breakpoint-up(lg) {
-      gap: rem(20);
+      gap: rem(25);
+      padding-bottom: rem(22);
     }
   }
   &__button-container {
     @include media-breakpoint-up(lg) {
+      margin-top: rem(6);
+      margin-right: rem(2);
     }
   }
   &__visible {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $color-black;
     width: 100%;
-
-    @include media-breakpoint-up(lg) {
-      padding-bottom: rem(24);
-    }
   }
 
   &__title {
-    @include h3;
-    margin-top: rem(16);
+    @include h3-card;
+    margin-top: rem(10);
+
     @include media-breakpoint-up(lg) {
       margin-top: rem(24);
     }
   }
   &__text {
     @include media-breakpoint-up(lg) {
-      margin-top: rem(30);
+      padding-top: rem(35);
+      padding-bottom: rem(2);
+      border-top: 1px solid $color-black;
     }
   }
 
@@ -51,15 +52,28 @@
   }
 
   &__icon {
-    width: rem(24);
-    height: rem(24);
+    width: rem(32);
+    height: rem(32);
+    margin-top: rem(4);
+    margin-right: rem(4);
     @include media-breakpoint-up(lg) {
-      width: rem(58);
-      height: rem(58);
+      width: rem(55);
+      height: rem(55);
+      margin-top: rem(8);
+    }
+  }
+
+  &__closable {
+    margin-top: rem(16);
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(0);
     }
   }
 
   &--open {
     background-color: $color-neon-green;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem(60);
+    }
   }
 }

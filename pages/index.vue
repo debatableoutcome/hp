@@ -29,6 +29,7 @@
   const heroData = {
     title: 'Navigating the digital landscape for success',
     text: 'Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.',
+
     image: {
       src: '/tmp/hero.jpg',
       alt: 'image',
@@ -51,8 +52,10 @@
   };
 
   const listFeaturesData = {
-    title: 'Services',
-    text: 'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:',
+    header: {
+      title: 'Services',
+      text: 'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:',
+    },
     items: [
       {
         titleUpper: 'Search engine',
@@ -144,6 +147,7 @@
   const CTAData = {
     title: 'Let’s make things happen',
     text: 'Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.',
+
     image: {
       src: '/tmp/CTA.png',
       alt: 'image',
@@ -155,8 +159,11 @@
   };
 
   const sliderCasesData = {
-    title: 'Case Studies',
-    text: 'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
+    header: {
+      title: 'Case Studies',
+      text: 'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
+    },
+
     items: [
       {
         text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales',
@@ -186,8 +193,12 @@
   };
 
   const listAccordeonsData = {
-    title: 'Our Working Process',
-    text: 'Step-by-Step Guide to Achieving Your Business Goals',
+    header: {
+      titleUpper: 'Our Working',
+      titleLower: 'Process',
+      text: 'Step-by-Step Guide to Achieving Your Business Goals',
+    },
+
     items: [
       {
         title: 'Consultation',

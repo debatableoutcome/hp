@@ -1,7 +1,7 @@
 <template>
   <section class="slider-cases">
     <div class="slider-cases__container container">
-      <AtomsIntro :title="title" :text="text" class="slider-cases__header" />
+      <AtomsIntro v-if="header" v-bind="header" class="slider-cases__header" />
       <div class="slider-cases__swiper swiper" ref="swiper">
         <div class="slider-cases__wrapper swiper-wrapper">
           <div
@@ -31,12 +31,10 @@
   import Swiper from 'swiper';
   import { Pagination } from 'swiper/modules';
   const props = defineProps({
-    title: {
-      type: String,
+    header: {
+      type: Object,
     },
-    text: {
-      type: String,
-    },
+
     items: {
       type: Array,
     },

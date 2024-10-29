@@ -22,15 +22,22 @@
       margin-right: rem(40);
     }
   }
+  &__title-upper,
+  &__title-lower {
+    @include h3;
+    @include highlighted;
+    display: inline-block;
+  }
 
   &__text {
     @include p;
     text-align: center;
+    width: 90%;
     @include media-breakpoint-up(lg) {
       text-align: left;
       width: 50%;
       align-self: flex-start;
-      margin-top: rem(8);
+      margin-top: rem(2);
     }
   }
 }
