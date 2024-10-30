@@ -4,6 +4,11 @@
   border-radius: rem(40);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding: rem(40) rem(50);
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding: rem(35) rem(35);
+  }
 
   &__content {
     display: flex;
@@ -11,28 +16,51 @@
   }
 
   &__top {
-    border: 1px solid #490c0c;
+    border-bottom: 1px $color-black solid;
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    padding-bottom: rem(20);
     gap: rem(20);
   }
 
-  &__action {
+  &__info {
+    height: 100%;
+  }
+  &__name {
+    @include h4-card;
+  }
+  &__position,
+  &__text {
+    @include p-card;
+  }
+
+  &__icon {
+    position: absolute;
+    top: rem(45);
+    right: rem(55);
+    width: rem(34);
+    height: rem(34);
     @include media-breakpoint-up(lg) {
+      top: rem(38);
+      right: rem(28);
     }
   }
 
   &__image {
-    grid-column: 2;
-    grid-row: 2;
-    margin-left: rem(40);
-    width: rem(165);
-    height: rem(129);
+    width: rem(110);
+    height: rem(110);
 
     @include media-breakpoint-up(lg) {
-      width: rem(105);
+      width: rem(102);
       height: rem(102);
+    }
+  }
+  &__bottom {
+    margin-top: rem(30);
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(26);
     }
   }
 }

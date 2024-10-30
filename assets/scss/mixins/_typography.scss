@@ -86,3 +86,21 @@
     font-size: rem(30);
   }
 }
+
+@mixin h4-card {
+  font-size: rem(18);
+  line-height: 1.4;
+  font-weight: 500;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(20);
+  }
+}
+
+@mixin p-card {
+  font-size: rem(16);
+  line-height: 1.4;
+  font-weight: 400;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(18);
+  }
+}

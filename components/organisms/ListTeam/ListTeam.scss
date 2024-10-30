@@ -22,4 +22,21 @@
       width: calc((100% / 3) - 30px);
     }
   }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button-container {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: rem(270);
+    }
+  }
+  &__toggle-button {
+    margin-top: rem(40);
+  }
 }

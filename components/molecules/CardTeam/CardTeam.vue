@@ -4,12 +4,11 @@
       <div class="card-team__top">
         <AtomsImage v-if="image" v-bind="image" class="card-team__image" />
 
+        <AtomsIcon v-if="icon" :icon="icon" class="card-team__icon" />
+
         <div class="card-team__info">
           <p v-if="name" class="card-team__name" v-html="name"></p>
           <p v-if="position" class="card-team__position" v-html="position"></p>
-        </div>
-        <div class="card-team__icon-container">
-          <AtomsIcon :icon="'linked-in'" class="card-team__icon" />
         </div>
       </div>
       <div class="card-team__bottom">

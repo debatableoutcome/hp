@@ -236,6 +236,10 @@
       title: 'Team',
       text: 'Meet the skilled and experienced team behind our successful digital marketing strategies',
     },
+    buttonText: {
+      showAll: 'See All Team',
+      showLess: 'Show Less',
+    },
 
     items: [
       {
@@ -250,7 +254,7 @@
       },
       {
         name: 'Jane Doe',
-        position: 'Director of Operations',
+        position: 'Director of<br>Operations',
         text: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
         icon: 'linkedin',
         image: {
