@@ -15,7 +15,8 @@
 
     @include media-breakpoint-up(lg) {
       background-color: $color-black;
-      border-radius: 40px;
+
+      border-radius: rem(40);
       padding: rem(70) rem(40) rem(72) rem(40);
     }
   }
@@ -36,14 +37,9 @@
     @include media-breakpoint-up(lg) {
       max-width: initial;
       border-radius: initial;
-      width: calc((100% / 3) - 10px);
-      margin-right: rem(0);
+      // width: calc((100% / 3) - 10px);
+      width: 60%;
       padding-left: rem(20);
-
-      &:not(:last-child) {
-        border-right: 1px $color-white solid;
-        margin-right: rem(35);
-      }
     }
   }
 

@@ -28,6 +28,7 @@
     v-bind="listTeamData"
     class="mb-56 mb-md-104"
   />
+
   <SlidersSliderTestimonials
     v-if="sliderTestimonialsData"
     v-bind="sliderTestimonialsData"

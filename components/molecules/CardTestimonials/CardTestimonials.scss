@@ -1,0 +1,60 @@
+.card-testimonials {
+  $root: &;
+
+  padding: 20px;
+  background-color: $color-black;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__frame {
+    position: relative;
+    padding: rem(48) rem(52);
+    border-radius: rem(40);
+    border: solid 1px $color-neon-green;
+  }
+  &__frame::before {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $color-black;
+    z-index: 2;
+  }
+
+  &__frame::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $color-neon-green;
+    z-index: 1;
+  }
+  &__info {
+    margin-top: rem(40);
+    margin-left: rem(50);
+  }
+  &__text,
+  &__position {
+    @include p-card;
+  }
+  &__name {
+    @include p;
+    color: $color-neon-green;
+  }
+  &__text,
+  &__name,
+  &__position {
+    position: relative;
+    z-index: 2;
+    color: $color-white;
+  }
+}
