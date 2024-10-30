@@ -28,6 +28,11 @@
     v-bind="listTeamData"
     class="mb-56 mb-md-104"
   />
+  <SlidersSliderTestimonials
+    v-if="sliderTestimonialsData"
+    v-bind="sliderTestimonialsData"
+    class="mb-56 mb-md-104"
+  />
 </template>
 
 <script setup>
@@ -322,6 +327,42 @@
           src: '/tmp/team/team-04.png',
           alt: 'image',
         },
+      },
+    ],
+  };
+
+  const sliderTestimonialsData = {
+    header: {
+      title: 'Testimonials',
+      text: 'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services',
+    },
+
+    items: [
+      {
+        name: 'John Smith',
+        position: 'Marketing Director at XYZ Corp',
+        text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
+      },
+      {
+        name: 'Jane Doe',
+        position: 'Director of Operations',
+        text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
+      },
+
+      {
+        name: 'Michael Brown',
+        position: 'Senior SEO Specialist',
+        text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
+      },
+      {
+        name: 'Emily Johnson',
+        position: 'PPC Manager',
+        text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
+      },
+      {
+        name: 'Brian Williams',
+        position: 'Social Media Specialist',
+        text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
       },
     ],
   };
