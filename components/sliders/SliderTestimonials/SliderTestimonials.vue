@@ -27,6 +27,7 @@
           :nextIcon="'arrow-right'"
           :showArrows="true"
           :showBullets="true"
+          :iconBullet="'bullet'"
           ref="pagination"
           class="slider-testimonials__pagination"
         />

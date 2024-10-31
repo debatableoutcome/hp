@@ -9,7 +9,6 @@
       ref="pagination"
       class="navigation__bullets swiper-pagination"
     ></div>
-
     <div class="navigation__arrow--next swiper-button-next">
       <AtomsIcon :icon="nextIcon" class="navigation__icon" />
     </div>
@@ -50,13 +49,8 @@
         ? {
             el: '.navigation__bullets',
             clickable: true,
-            renderBullet: function (index, className) {
-              return `
-              <span class="${className} custom-bullet">
-                <AtomsIcon icon="bullet" class="bullet-icon" />
-              </span>
-            `;
-            },
+            bulletClass: 'custom-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active',
           }
         : false,
       navigation: props.showArrows
