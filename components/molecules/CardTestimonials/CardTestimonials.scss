@@ -1,41 +1,73 @@
 .card-testimonials {
   $root: &;
 
-  padding: 20px;
+  padding: rem(30) rem(35);
   background-color: $color-black;
   border-radius: 8px;
   overflow: hidden;
-
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+  }
   &__frame {
     position: relative;
-    padding: rem(48) rem(52);
+    padding: rem(30);
     border-radius: rem(40);
     border: solid 1px $color-neon-green;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      padding: rem(48) rem(52);
+      border-radius: rem(40);
+      border: solid 1px $color-neon-green;
+    }
   }
   &__frame::before {
     content: '';
     position: absolute;
-    bottom: -29px;
-    left: 54px;
+    bottom: -27px;
+    left: 45px;
     width: 0;
     height: 0;
     border-left: rem(30) solid transparent;
     border-right: rem(30) solid transparent;
     border-top: rem(30) solid $color-black;
     z-index: 2;
+    @include media-breakpoint-up(lg) {
+      content: '';
+      position: absolute;
+      bottom: -29px;
+      left: 44px;
+      width: 0;
+      height: 0;
+      border-left: rem(30) solid transparent;
+      border-right: rem(30) solid transparent;
+      border-top: rem(30) solid $color-black;
+      z-index: 2;
+    }
   }
 
   &__frame::after {
     content: '';
     position: absolute;
     bottom: -30px;
-    left: 54px;
+    left: 44px;
     width: 0;
     height: 0;
     border-left: rem(30) solid transparent;
     border-right: rem(30) solid transparent;
     border-top: rem(30) solid $color-neon-green;
     z-index: 1;
+    @include media-breakpoint-up(lg) {
+      content: '';
+      position: absolute;
+      bottom: -28px;
+      left: 54px;
+      width: 0;
+      height: 0;
+      border-left: rem(30) solid transparent;
+      border-right: rem(30) solid transparent;
+      border-top: rem(30) solid $color-neon-green;
+      z-index: 1;
+    }
   }
   &__info {
     margin-top: rem(50);
