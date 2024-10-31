@@ -22,10 +22,13 @@
           </div>
         </div>
 
-        <div
-          ref="pagination"
-          class="slider-testimonials__pagination swiper-pagination"
-        ></div>
+        <AtomsNavigation
+          :prevIcon="'arrow-left'"
+          :nextIcon="'arrow-right'"
+          :showArrows="true"
+          :showBullets="true"
+          class="slider-testimonials__pagination"
+        />
       </div>
     </div>
   </section>
@@ -33,12 +36,12 @@
 
 <script setup>
   import Swiper from 'swiper';
-  import { Pagination } from 'swiper/modules';
+  import { Pagination, Navigation } from 'swiper/modules';
+
   const props = defineProps({
     header: {
       type: Object,
     },
-
     items: {
       type: Array,
     },
@@ -46,16 +49,22 @@
 
   const slider = ref(null);
   const swiper = ref(null);
-  const pagination = ref(null);
 
   function initSlider() {
     slider.value = new Swiper(swiper.value, {
-      modules: [Pagination],
+      modules: [Pagination, Navigation],
       slidesPerView: 'auto',
       simulateTouch: false,
       pagination: {
-        el: pagination.value,
+        el: '.slider-testimonials__pagination .swiper-pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className} custom-bullet"></span>`;
+        },
+      },
+      navigation: {
+        nextEl: '.slider-testimonials__pagination .swiper-button-next',
+        prevEl: '.slider-testimonials__pagination .swiper-button-prev',
       },
     });
   }

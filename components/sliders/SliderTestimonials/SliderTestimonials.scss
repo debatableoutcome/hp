@@ -54,8 +54,8 @@
     display: flex;
     justify-content: center;
 
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   display: none;
+    // }
   }
 }

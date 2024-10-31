@@ -13,6 +13,9 @@
     <IconAccordeonClosed v-if="icon === 'accordeon-closed'" />
     <IconAccordeonOpen v-if="icon === 'accordeon-open'" />
     <IconLinkedin v-if="icon === 'linkedin'" />
+    <IconArrowLeft v-if="icon === 'arrow-left'" />
+    <IconArrowRight v-if="icon === 'arrow-right'" />
+    <IconBullet v-if="icon === 'bullet'" />
   </span>
   <span v-else :class="classes">
     <slot></slot>
@@ -32,6 +35,9 @@
   import IconAccordeonClosed from '@/assets/icons/accordeon-closed.svg';
   import IconAccordeonOpen from '@/assets/icons/accordeon-open.svg';
   import IconLinkedin from '@/assets/icons/linkedin.svg';
+  import IconArrowLeft from '@/assets/icons/arrow-left.svg';
+  import IconArrowRight from '@/assets/icons/arrow-right.svg';
+  import IconBullet from '@/assets/icons/bullet.svg';
 
   const props = defineProps({
     icon: String,
@@ -60,6 +66,7 @@
   });
 
   onMounted(() => {
+    console.log('Icon loaded:', props.icon);
     if (isLink.value) {
       getSVGHtml();
     }

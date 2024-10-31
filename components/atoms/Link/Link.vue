@@ -22,7 +22,7 @@
 
 <script>
   export default {
-    name: 'AppLink',
+    name: 'Link',
     props: {
       href: {
         type: String,
