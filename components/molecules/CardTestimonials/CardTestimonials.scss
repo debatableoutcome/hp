@@ -3,10 +3,10 @@
 
   padding: rem(30) rem(35);
   background-color: $color-black;
-  border-radius: 8px;
+  border-radius: rem(8);
   overflow: hidden;
   @include media-breakpoint-up(lg) {
-    padding: 20px;
+    padding: rem(20);
   }
   &__frame {
     position: relative;
@@ -23,7 +23,7 @@
   &__frame::before {
     content: '';
     position: absolute;
-    bottom: -27px;
+    bottom: -25px;
     left: 45px;
     width: 0;
     height: 0;
@@ -34,8 +34,8 @@
     @include media-breakpoint-up(lg) {
       content: '';
       position: absolute;
-      bottom: -29px;
-      left: 44px;
+      bottom: -28px;
+      left: 54px;
       width: 0;
       height: 0;
       border-left: rem(30) solid transparent;
@@ -48,7 +48,7 @@
   &__frame::after {
     content: '';
     position: absolute;
-    bottom: -30px;
+    bottom: -27px;
     left: 44px;
     width: 0;
     height: 0;
@@ -59,7 +59,7 @@
     @include media-breakpoint-up(lg) {
       content: '';
       position: absolute;
-      bottom: -28px;
+      bottom: -30px;
       left: 54px;
       width: 0;
       height: 0;

@@ -13,7 +13,7 @@
   &__swiper {
     @include media-breakpoint-up(lg) {
       background-color: $color-black;
-      border-radius: 40px;
+      border-radius: rem(40);
     }
   }
 
@@ -26,12 +26,12 @@
   &__slide {
     max-width: 90%;
     background-color: $color-black;
-    border-radius: 40px;
+    border-radius: rem(40);
     margin-right: rem(20);
 
     @include media-breakpoint-up(lg) {
       border-radius: initial;
-      max-width: calc((100% / 3) - 40px);
+      max-width: calc((100% / 3) - rem(40));
       margin-right: rem(0);
       padding-left: rem(20);
       min-height: rem(186);

@@ -1,8 +1,8 @@
 @mixin highlighted(
   $background-color: $color-neon-green,
   $border-radius: 5px,
-  $padding-vertical: 0.1rem,
-  $padding-horizontal: 0.4rem
+  $padding-vertical: 1px,
+  $padding-horizontal: 4px
 ) {
   background-color: $background-color;
   border-radius: $border-radius;
