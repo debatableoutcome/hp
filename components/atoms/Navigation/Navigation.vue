@@ -1,9 +1,6 @@
 <template>
   <div class="navigation">
-    <div
-      class="navigation__arrow navigation__arrow--prev"
-      :class="{ 'is-hidden': !showArrows }"
-    >
+    <div class="navigation__arrow--prev swiper-button-prev">
       <AtomsIcon :icon="prevIcon" class="navigation__icon" />
     </div>
 
@@ -13,10 +10,7 @@
       class="navigation__bullets swiper-pagination"
     ></div>
 
-    <div
-      class="navigation__arrow navigation__arrow--next"
-      :class="{ 'is-hidden': !showArrows }"
-    >
+    <div class="navigation__arrow--next swiper-button-next">
       <AtomsIcon :icon="nextIcon" class="navigation__icon" />
     </div>
   </div>
@@ -25,6 +19,7 @@
 <script setup>
   import Swiper from 'swiper';
   import { Pagination, Navigation } from 'swiper/modules';
+  import { onMounted, ref } from 'vue';
 
   const props = defineProps({
     prevIcon: {

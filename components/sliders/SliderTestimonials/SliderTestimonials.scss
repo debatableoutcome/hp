@@ -32,13 +32,13 @@
     max-width: 100%;
     background-color: $color-black;
     border-radius: 40px;
-    margin-right: rem(20);
+    margin-right: rem(0);
 
     @include media-breakpoint-up(lg) {
       max-width: initial;
       border-radius: initial;
       // width: calc((100% / 3) - 10px);
-      width: 60%;
+      width: 57%;
       padding-left: rem(20);
     }
   }
@@ -50,12 +50,6 @@
 
   &__pagination {
     position: relative;
-    margin-top: rem(32);
-    display: flex;
-    justify-content: center;
-
-    // @include media-breakpoint-up(lg) {
-    //   display: none;
-    // }
+    margin-top: rem(112);
   }
 }

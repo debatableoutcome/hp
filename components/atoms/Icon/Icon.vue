@@ -66,7 +66,6 @@
   });
 
   onMounted(() => {
-    console.log('Icon loaded:', props.icon);
     if (isLink.value) {
       getSVGHtml();
     }
