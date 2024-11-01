@@ -14,6 +14,10 @@
     text: {
       type: String,
     },
+    type: {
+      type: String,
+      default: 'button',
+    },
     theme: {
       type: String,
       default: 'white',

@@ -1,0 +1,53 @@
+.form-default {
+  &__form {
+    border: 1px solid #b32e2e;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      margin-left: rem(60);
+    }
+  }
+
+  &__fields-group {
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: rem(20);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(40);
+      gap: rem(35);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    gap: rem(60);
+    @include media-breakpoint-up(lg) {
+      border: 1px solid #1c2494;
+      gap: rem(35);
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 100%;
+    padding: rem(12);
+    background-color: $color-black;
+    color: $color-white;
+    font-size: rem(16);
+    border: none;
+    border-radius: rem(4);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+}

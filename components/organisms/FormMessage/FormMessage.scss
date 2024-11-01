@@ -1,0 +1,43 @@
+.form-message {
+  &__container {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__content {
+    background-color: $color-gray;
+    padding: rem(24);
+    border-radius: rem(45);
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      gap: rem(210);
+      padding: rem(60) rem(0) rem(80) rem(100);
+    }
+  }
+
+  &__image {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: 0;
+      top: rem(20);
+      border: 1px solid #b33838;
+      display: block;
+      width: rem(649);
+      height: rem(648);
+      margin-top: rem(40);
+    }
+  }
+}

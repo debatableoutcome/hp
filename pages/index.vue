@@ -34,6 +34,12 @@
     v-bind="sliderTestimonialsData"
     class="mb-56 mb-md-104"
   />
+
+  <OrganismsFormMessage
+    v-if="formMessageData"
+    v-bind="formMessageData"
+    class="mb-56 mb-md-104"
+  />
 </template>
 
 <script setup>
@@ -366,5 +372,65 @@
         text: '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
       },
     ],
+  };
+
+  const formMessageData = {
+    header: {
+      title: 'Contact Us',
+      text: "Connect with Us: Let's Discuss Your Digital Marketing Needs",
+    },
+    image: {
+      src: '/tmp/form-01.png',
+      alt: 'image',
+    },
+    form: {
+      radioButtons: {
+        radioGroup: [
+          { label: 'Say Hi', value: 'say-hi', id: '1' },
+          { label: 'Get a Quote', value: 'get-quote', id: '2' },
+        ],
+        contactType: 'say-hi',
+      },
+
+      errorMessage: 'This field is required',
+      fields: [
+        {
+          input: {
+            id: '01',
+            type: 'text',
+            label: 'Name',
+            name: 'name',
+            required: true,
+            placeholder: 'Name',
+          },
+        },
+        {
+          input: {
+            id: '02',
+            type: 'email',
+            label: 'E-mail',
+            name: 'email',
+            required: true,
+            placeholder: 'Email',
+          },
+        },
+
+        {
+          input: {
+            id: '03',
+            type: 'textarea',
+            label: 'Message',
+            name: 'message',
+            required: false,
+            placeholder: 'Message',
+          },
+        },
+      ],
+      button: {
+        text: 'Send Message',
+        type: 'submit',
+        theme: 'black',
+      },
+    },
   };
 </script>
