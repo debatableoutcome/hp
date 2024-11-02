@@ -1,9 +1,9 @@
-.form-message {
+.contact-us {
   &__container {
     @include media-breakpoint-up(lg) {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
+      // display: flex;
+      // justify-content: flex-start;
+      // flex-direction: column;
     }
   }
 
@@ -14,15 +14,22 @@
     }
   }
 
-  &__content {
-    background-color: $color-gray;
-    padding: rem(24);
-    border-radius: rem(45);
+  &__form {
     @include media-breakpoint-up(lg) {
+      width: 49%;
+    }
+  }
+  &__content {
+    padding: rem(24);
+
+    @include media-breakpoint-up(lg) {
+      background-color: $color-gray;
+      border-radius: rem(45);
       position: relative;
-      display: flex;
-      justify-content: flex-start;
-      gap: rem(210);
+
+      // display: flex;
+      // justify-content: flex-start;
+      // gap: rem(210);
       padding: rem(60) rem(0) rem(80) rem(100);
     }
   }
@@ -31,13 +38,12 @@
     display: none;
     @include media-breakpoint-up(lg) {
       position: absolute;
-      right: 0;
-      top: rem(20);
-      border: 1px solid #b33838;
+      right: rem(-300);
+      top: rem(66);
+
       display: block;
       width: rem(649);
       height: rem(648);
-      margin-top: rem(40);
     }
   }
 }

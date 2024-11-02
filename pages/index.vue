@@ -35,7 +35,7 @@
     class="mb-56 mb-md-104"
   />
 
-  <OrganismsFormMessage
+  <OrganismsContactUs
     v-if="formMessageData"
     v-bind="formMessageData"
     class="mb-56 mb-md-104"

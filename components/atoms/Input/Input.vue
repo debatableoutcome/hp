@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="input"
-    :class="{ 'input--error': meta && meta.touched && meta.error }"
-  >
+  <div class="input" :class="classes">
+    <label v-if="label" :for="id" class="input__label">{{ label }}</label>
     <Field
       :name="name"
       :type="type"
@@ -15,9 +13,7 @@
       class="input__field"
       @focus="focused = true"
       @blur="focused = false"
-      :class="{ 'input--focused': focused, 'input--filled': field?.value }"
     />
-    <label v-if="label" :for="id" class="input__label">{{ label }}</label>
     <ErrorMessage
       v-if="meta && meta.error"
       :name="name"
@@ -28,11 +24,12 @@
 
 <script setup>
   import { Field, ErrorMessage } from 'vee-validate';
+  import { computed, ref } from 'vue';
   import * as Yup from 'yup';
 
   const props = defineProps({
-    id: { type: String, required: true },
-    name: { type: String, required: true },
+    id: String,
+    name: String,
     type: { type: String, default: 'text' },
     placeholder: { type: String, default: '' },
     label: { type: String, default: '' },
@@ -55,6 +52,14 @@
       );
     return schema;
   });
+
+  const classes = computed(() => ({
+    input: true,
+    [`input--${props.type}`]: props.type,
+    'input--error': props.required && !props.placeholder,
+    'input--focused': focused.value,
+    'input--filled': Boolean(props.placeholder),
+  }));
 </script>
 
 <style lang="scss">

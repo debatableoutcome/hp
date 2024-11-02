@@ -1,55 +1,61 @@
 .input {
+  $b: &;
   position: relative;
   margin-bottom: rem(10);
 
-  &--error {
-    .input__input {
-      border-color: $color-red;
-    }
-    .input__error-message {
-      color: $color-red;
-      font-size: rem(14);
-    }
+  &--error#{$b}__field {
+    border-color: $color-red;
+  }
+  &--focused#{$b}__field {
+    // border-color: $color-black;
+  }
+  &--filled#{$b}__field {
+    // border-color: $color-gray;
   }
 
   &__input {
     width: 100%;
     padding: rem(12);
-    border: rem(1) solid $color-gray;
     border-radius: rem(4);
     font-size: rem(16);
-    transition: border-color 0.3s;
-
-    &:focus {
-      border-color: $color-black;
-    }
-
-    &.input--filled {
-      border-color: $color-gray;
-    }
-
-    &.input--focused {
-      border-color: $color-black;
-    }
   }
   &__field {
+    width: 100%;
     outline: none;
     border-radius: rem(10);
+    padding: rem(20);
     @include media-breakpoint-up(lg) {
-      padding: rem(20);
+    }
+    &::placeholder {
+      @include p-card;
+      position: absolute;
+      top: rem(20);
+      left: rem(29);
     }
   }
   &__label {
     position: absolute;
-    top: rem(-12);
-    left: rem(8);
-    font-size: rem(14);
-    color: $color-gray;
-    background: $color-white;
+    top: rem(-32);
+    left: 0;
+    color: $color-black;
     padding: 0 rem(4);
+    @include media-breakpoint-up(lg) {
+      top: rem(-25);
+      left: 0;
+    }
   }
 
   &__error-message {
     margin-top: rem(4);
+  }
+
+  &--textarea {
+    #{$b}__field {
+      height: rem(140);
+      resize: vertical;
+      @include media-breakpoint-up(lg) {
+        height: rem(190);
+      }
+    }
   }
 }
