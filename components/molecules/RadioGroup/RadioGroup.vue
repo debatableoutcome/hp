@@ -21,14 +21,14 @@
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue';
+  import { ref, watch, onMounted } from 'vue';
 
   const props = defineProps({
     options: {
       type: Array,
       required: true,
     },
-    checkedValue: {
+    modelValue: {
       type: String,
       default: '',
     },
@@ -38,22 +38,29 @@
     },
   });
 
-  const emit = defineEmits(['update:checkedValue']);
+  const emit = defineEmits(['update:modelValue']);
 
-  const internalCheckedValue = ref(props.checkedValue || '');
+  const internalCheckedValue = ref(props.modelValue);
 
   const handleChange = (value) => {
     internalCheckedValue.value = value;
-    emit('update:checkedValue', value);
+    emit('update:modelValue', value);
   };
 
   watch(
-    () => props.checkedValue,
+    () => props.modelValue,
     (newValue) => {
       internalCheckedValue.value = newValue;
     },
     { immediate: true }
   );
+
+  onMounted(() => {
+    if (!internalCheckedValue.value && props.modelValue) {
+      internalCheckedValue.value = props.modelValue;
+      emit('update:modelValue', props.modelValue);
+    }
+  });
 </script>
 
 <style lang="scss">

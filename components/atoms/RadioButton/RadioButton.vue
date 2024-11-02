@@ -20,7 +20,7 @@
   const props = defineProps({
     id: { type: String, required: true },
     value: { type: String, required: true },
-    checkedValue: { type: String, required: true }, // Current selected value in RadioGroup
+    checkedValue: { type: String, required: true },
     name: { type: String, required: true },
     label: { type: String, required: true },
   });

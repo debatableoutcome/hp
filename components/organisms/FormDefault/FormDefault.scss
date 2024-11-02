@@ -1,9 +1,8 @@
 .form-default {
   &__form {
-    // width: 100%;
     @include media-breakpoint-up(lg) {
-      // width: 50%;
-      margin-left: rem(60);
+      padding-left: rem(40);
+      padding-right: rem(40);
     }
   }
 
@@ -12,7 +11,7 @@
     width: 100%;
     margin-bottom: rem(78);
     gap: rem(70);
-    padding-left: rem(14);
+    padding-left: rem(30);
     justify-content: flex-start;
     @include media-breakpoint-up(lg) {
       padding-left: 0;
@@ -25,7 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(44);
-
+    margin-bottom: rem(8);
     @include media-breakpoint-up(lg) {
       gap: rem(48);
       margin-bottom: rem(30);
@@ -34,8 +33,8 @@
   &__fields {
     background-color: $color-gray;
     border-radius: rem(45);
-    padding: rem(40) rem(40);
-    margin-bottom: rem(70);
+    padding: rem(40) rem(40) rem(40) rem(30);
+    margin-bottom: rem(30);
     @include media-breakpoint-up(lg) {
       background-color: initial;
       border-radius: initial;

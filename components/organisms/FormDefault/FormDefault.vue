@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="onSubmit" class="form-default">
+  <form @submit.prevent="onSubmit" class="form-default__form">
     <div class="form-default__fields">
       <MoleculesRadioGroup
         :options="radioButtons.radioGroup"

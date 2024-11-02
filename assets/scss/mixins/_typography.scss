@@ -57,6 +57,7 @@
 
 @mixin text-button {
   font-size: rem(20);
+  font-weight: 400;
   line-height: 1.4;
   @include media-breakpoint-up(lg) {
     font-size: rem(20);

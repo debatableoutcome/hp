@@ -1,9 +1,6 @@
 .contact-us {
   &__container {
     @include media-breakpoint-up(lg) {
-      // display: flex;
-      // justify-content: flex-start;
-      // flex-direction: column;
     }
   }
 
@@ -16,21 +13,14 @@
 
   &__form {
     @include media-breakpoint-up(lg) {
-      width: 49%;
+      width: 54%;
     }
   }
   &__content {
-    padding: rem(24);
-
     @include media-breakpoint-up(lg) {
       background-color: $color-gray;
       border-radius: rem(45);
       position: relative;
-
-      // display: flex;
-      // justify-content: flex-start;
-      // gap: rem(210);
-      padding: rem(60) rem(0) rem(80) rem(100);
     }
   }
 
