@@ -30,7 +30,7 @@
     },
     checkedValue: {
       type: String,
-      default: '', // Initial checked value if provided
+      default: '',
     },
     name: {
       type: String,
@@ -40,16 +40,13 @@
 
   const emit = defineEmits(['update:checkedValue']);
 
-  // Internal state for the currently checked value
   const internalCheckedValue = ref(props.checkedValue || '');
 
-  // Update internal value and emit only when the selected option changes
   const handleChange = (value) => {
     internalCheckedValue.value = value;
     emit('update:checkedValue', value);
   };
 
-  // Sync the initial checkedValue prop with internal state
   watch(
     () => props.checkedValue,
     (newValue) => {
