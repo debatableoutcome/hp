@@ -32,6 +32,7 @@
     name: String,
     type: { type: String, default: 'text' },
     placeholder: { type: String, default: '' },
+    isBlack: { type: Boolean, default: false },
     label: { type: String, default: '' },
     disabled: { type: Boolean, default: false },
     required: { type: Boolean, default: false },
@@ -59,6 +60,7 @@
     'input--error': props.required && !props.placeholder,
     'input--focused': focused.value,
     'input--filled': Boolean(props.placeholder),
+    'input--black': Boolean(props.placeholder),
   }));
 </script>
 

@@ -58,4 +58,21 @@
       }
     }
   }
+
+  &--black {
+    #{$b}__field {
+      background-color: $color-black-alternative;
+    }
+    #{$b}__label {
+      color: $color-white;
+    }
+    #{$b}__input {
+      color: $color-white;
+      caret-color: $color-white;
+
+      &::placeholder {
+        color: rgba($color-white, 0.6);
+      }
+    }
+  }
 }

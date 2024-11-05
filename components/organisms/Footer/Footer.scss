@@ -1,0 +1,140 @@
+.footer {
+  &__container {
+  }
+  &__content {
+    color: $color-white;
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: rem(50) rem(50) rem(30) rem(50);
+    @include media-breakpoint-up(lg) {
+      border-top-left-radius: rem(45);
+      border-top-right-radius: rem(45);
+      padding: rem(55) rem(60) rem(50) rem(60);
+    }
+  }
+  &__top-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: rem(55);
+    }
+  }
+  &__middle-row {
+    border-bottom: 1px solid #eee;
+    margin-bottom: rem(50);
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+      flex-direction: row;
+      padding-bottom: rem(40);
+    }
+  }
+
+  &__bottom-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: rem(40);
+  }
+  &__social {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      gap: rem(20);
+    }
+  }
+  &__logo span {
+    width: rem(150);
+    height: rem(34);
+    margin-bottom: rem(38);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      width: rem(180);
+      height: rem(34);
+    }
+  }
+  &__social-link span {
+    width: rem(29);
+    height: rem(29);
+  }
+  &__links {
+    @include p-card;
+    a {
+      @include link-reset;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      gap: rem(40);
+    }
+  }
+
+  &__contacts {
+    gap: rem(22);
+    @include p;
+    @include media-breakpoint-up(lg) {
+    }
+  }
+  &__contact-us {
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      width: 44%;
+    }
+  }
+  &__contact-us-title {
+    @include highlighted;
+    @include h4;
+    display: flex;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(27);
+    }
+  }
+  &__text {
+    @include p;
+    a {
+      @include link-reset;
+    }
+  }
+  &__form {
+    background-color: $color-black-alternative;
+    border-radius: rem(14);
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: rem(20);
+      width: 56%;
+      padding: rem(58) rem(30);
+    }
+  }
+  &__form-input {
+    @include media-breakpoint-up(lg) {
+      width: 51%;
+    }
+  }
+  &__form-input input {
+    @include media-breakpoint-up(lg) {
+      height: rem(67);
+    }
+  }
+
+  &__button-container {
+    @include media-breakpoint-up(lg) {
+      width: 45%;
+    }
+  }
+}

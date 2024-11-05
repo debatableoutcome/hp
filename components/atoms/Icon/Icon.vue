@@ -16,6 +16,10 @@
     <IconArrowLeft v-if="icon === 'arrow-left'" />
     <IconArrowRight v-if="icon === 'arrow-right'" />
     <IconBullet v-if="icon === 'bullet'" />
+    <IconLogoWhite v-if="icon === 'logo-white'" />
+    <IconLinkedinWhite v-if="icon === 'linkedin-white'" />
+    <IconFBWhite v-if="icon === 'fb-white'" />
+    <IconTwitterWhite v-if="icon === 'twitter-white'" />
   </span>
   <span v-else :class="classes">
     <slot></slot>
@@ -38,6 +42,10 @@
   import IconArrowLeft from '@/assets/icons/arrow-left.svg';
   import IconArrowRight from '@/assets/icons/arrow-right.svg';
   import IconBullet from '@/assets/icons/bullet.svg';
+  import IconLogoWhite from '@/assets/icons/logo-white.svg';
+  import IconLinkedinWhite from '@/assets/icons/linkedin-white.svg';
+  import IconFBWhite from '@/assets/icons/fb-white.svg';
+  import IconTwitterWhite from '@/assets/icons/twitter-white.svg';
 
   const props = defineProps({
     icon: String,

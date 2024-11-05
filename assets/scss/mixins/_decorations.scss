@@ -5,6 +5,7 @@
   $padding-horizontal: 4px
 ) {
   background-color: $background-color;
+  color: $color-black;
   border-radius: $border-radius;
   padding: $padding-vertical $padding-horizontal;
   display: inline-block;

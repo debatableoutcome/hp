@@ -36,6 +36,19 @@
       }
     }
   }
+
+  &--neon-green {
+    background-color: $color-neon-green;
+    color: $color-black;
+    @include media-breakpoint-up(lg) {
+      @include hover {
+        background-color: $color-white;
+        color: $color-black;
+
+        @include defaultTransition(background-color);
+      }
+    }
+  }
   &--auto {
     width: max-content;
   }
