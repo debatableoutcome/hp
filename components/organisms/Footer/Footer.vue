@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    <div class="footer__container container">
+    <div class="footer__container">
       <div class="footer__content">
         <div class="footer__top-row">
           <div v-if="logo" class="footer__logo">
@@ -16,7 +16,7 @@
               {{ link.title }}
             </a>
           </div>
-          <div v-if="social" class="footer__social">
+          <div v-if="social" class="footer__social-desktop">
             <a
               v-for="(link, index) in social"
               :key="index"
@@ -33,7 +33,7 @@
             <h3 class="footer__contact-us-title">{{ contactUs.title }}</h3>
             <ul class="footer__contacts">
               <li v-for="(contact, index) in contactUs.details" :key="index">
-                <strong>{{ contact.title }}:</strong>
+                <strong>{{ contact.title }}: </strong>
                 <span v-html="contact.text"></span>
               </li>
             </ul>
@@ -61,6 +61,16 @@
                 class="footer__button"
               />
             </div>
+          </div>
+          <div v-if="social" class="footer__social-mob">
+            <a
+              v-for="(link, index) in social"
+              :key="index"
+              :href="link.href"
+              class="footer__social-link"
+            >
+              <AtomsIcon :icon="link.icon" alt="Logo" />
+            </a>
           </div>
         </div>
 
