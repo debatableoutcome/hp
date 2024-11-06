@@ -19,7 +19,12 @@
       gap: rem(44);
     }
   }
-
+  &__form-wrapper {
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      padding: rem(60) rem(0) rem(40) rem(60);
+    }
+  }
   &__fields-group {
     display: flex;
     flex-direction: column;
@@ -33,7 +38,7 @@
   &__fields {
     background-color: $color-gray;
     border-radius: rem(45);
-    padding: rem(40) rem(40) rem(40) rem(30);
+    padding: rem(40) rem(30) rem(40) rem(30);
     margin-bottom: rem(30);
     @include media-breakpoint-up(lg) {
       background-color: initial;
@@ -45,6 +50,8 @@
   &__button {
     transition: background-color 0.3s;
 
+    @include media-breakpoint-up(lg) {
+    }
     &:hover {
       background-color: $color-gray;
     }

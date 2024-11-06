@@ -60,7 +60,7 @@
     'input--error': props.required && !props.placeholder,
     'input--focused': focused.value,
     'input--filled': Boolean(props.placeholder),
-    'input--black': Boolean(props.placeholder),
+    'input--black': Boolean(props.isBlack),
   }));
 </script>
 

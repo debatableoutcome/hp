@@ -38,7 +38,7 @@
   <OrganismsContactUs
     v-if="formMessageData"
     v-bind="formMessageData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-144"
   />
 </template>
 

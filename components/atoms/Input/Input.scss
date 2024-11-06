@@ -17,13 +17,13 @@
     width: 100%;
     padding: rem(12);
     border-radius: rem(4);
-    font-size: rem(16);
   }
   &__field {
     width: 100%;
     outline: none;
     border-radius: rem(10);
     padding: rem(20);
+    background-color: $color-white;
     @include media-breakpoint-up(lg) {
     }
     &::placeholder {

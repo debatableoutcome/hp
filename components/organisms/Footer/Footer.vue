@@ -48,6 +48,7 @@
               :label="field.input.label"
               v-model="fieldValues[field.input.name]"
               :required="field.input.required"
+              :isBlack="true"
               :placeholder="field.input.placeholder"
               class="footer__form-input"
             />
