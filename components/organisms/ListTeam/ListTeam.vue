@@ -40,8 +40,17 @@
   const showAll = ref(false);
   const isDesktopDevice = ref(false);
 
-  onMounted(() => {
+  const checkIsDesktop = () => {
     isDesktopDevice.value = window.innerWidth >= 1024;
+  };
+
+  onMounted(() => {
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', checkIsDesktop);
   });
 
   const toggleShowAll = () => {
