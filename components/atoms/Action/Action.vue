@@ -1,13 +1,10 @@
 <template>
-  <div class="action" :class="classes">
-    <AtomsLink v-if="href" :href="href" class="action__link">
-      <div class="action__wrapper">
-        <AtomsIcon v-if="icon" :icon="icon" class="action__icon" />
-
-        <span v-if="text" class="action__text">{{ text }}</span>
-      </div>
-    </AtomsLink>
-  </div>
+  <AtomsLink v-if="href" :href="href" class="action" :class="classes">
+    <div class="action__wrapper">
+      <AtomsIcon v-if="icon" :icon="icon" class="action__icon" />
+      <span v-if="text" class="action__text">{{ text }}</span>
+    </div>
+  </AtomsLink>
 </template>
 
 <script setup>
@@ -20,6 +17,11 @@
     },
     text: {
       type: String,
+    },
+
+    isIconSmall: {
+      type: Boolean,
+      default: false,
     },
     theme: {
       type: String,
@@ -42,6 +44,8 @@
       action: true,
       [`action--${props.theme}`]: props.theme,
       [`action--${props.iconPlacement}`]: props.iconPlacement,
+
+      'action--small-icon': props.isIconSmall,
     };
   });
 </script>

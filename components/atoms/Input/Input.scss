@@ -16,18 +16,17 @@
   &__input {
     width: 100%;
     padding: rem(12);
-    border-radius: rem(4);
   }
   &__field {
     width: 100%;
     outline: none;
+    border: 1px $color-black solid;
     border-radius: rem(10);
     padding: rem(20);
     background-color: $color-white;
-    @include media-breakpoint-up(lg) {
-    }
+    @include p-card;
+
     &::placeholder {
-      @include p-card;
       position: absolute;
       top: rem(20);
       left: rem(29);
@@ -49,16 +48,6 @@
     margin-top: rem(4);
   }
 
-  &--textarea {
-    #{$b}__field {
-      height: rem(140);
-      resize: vertical;
-      @include media-breakpoint-up(lg) {
-        height: rem(190);
-      }
-    }
-  }
-
   &--black {
     #{$b}__field {
       background-color: $color-black-alternative;
@@ -70,9 +59,9 @@
       color: $color-white;
       caret-color: $color-white;
 
-      &::placeholder {
-        color: rgba($color-white, 0.6);
-      }
+      // &::placeholder {
+      //   color: rgba($color-white, 0.6);
+      // }
     }
   }
 }

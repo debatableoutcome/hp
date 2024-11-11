@@ -10,43 +10,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
   &--white {
     background-color: $color-white;
     color: $color-black;
-    @include media-breakpoint-up(lg) {
-      @include hover {
-        background-color: $color-black;
-        color: $color-white;
-        @include defaultTransition(background-color);
-      }
+    @include hover {
+      background-color: $color-black;
+      color: $color-white;
+      @include defaultTransition(background-color);
     }
   }
 
   &--black {
     background-color: $color-black;
     color: $color-white;
-    @include media-breakpoint-up(lg) {
-      @include hover {
-        background-color: $color-white;
-        color: $color-black;
+    @include hover {
+      background-color: $color-white;
+      color: $color-black;
 
-        @include defaultTransition(background-color);
-      }
+      @include defaultTransition(background-color);
     }
   }
 
   &--neon-green {
     background-color: $color-neon-green;
     color: $color-black;
-    @include media-breakpoint-up(lg) {
-      @include hover {
-        background-color: $color-white;
-        color: $color-black;
+    @include hover {
+      background-color: $color-white;
+      color: $color-black;
 
-        @include defaultTransition(background-color);
-      }
+      @include defaultTransition(background-color);
     }
   }
   &--auto {

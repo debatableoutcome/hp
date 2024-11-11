@@ -7,6 +7,7 @@
         ...action,
         theme: 'neon-green',
         iconPlacement: 'icon-right',
+        isIconSmall: true,
       }"
       class="card-cases__action"
     />

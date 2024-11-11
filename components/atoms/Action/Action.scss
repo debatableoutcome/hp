@@ -1,24 +1,25 @@
 .action {
   $b: &;
-
+  @include link-reset;
   &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: rem(15);
     @include media-breakpoint-up(lg) {
-      display: flex;
       justify-content: flex-start;
-      gap: rem(15);
     }
   }
   &__text {
+    @include text-regular;
     display: none;
     @include text-header;
     @include media-breakpoint-up(lg) {
       display: block;
-      margin-top: rem(4);
     }
   }
-  a {
-    @include link-reset;
-  }
+
   &__icon {
     width: rem(41);
     height: rem(41);
@@ -29,28 +30,34 @@
       color: $color-white;
     }
   }
+  &--black {
+    #{$b}__text {
+      color: $color-black;
+    }
+  }
   &--neon-green {
     #{$b}__text {
       color: $color-neon-green;
     }
   }
-  &--icon-right {
-    #{$b}__wrapper {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: row-reverse;
-      gap: rem(15);
-    }
-    #{$b}__text {
-      @include text-regular;
-      display: block;
-    }
+
+  &--small-icon {
     #{$b}__icon {
       width: rem(22);
       height: rem(22);
       @include media-breakpoint-up(lg) {
         margin-top: rem(6);
       }
+    }
+  }
+
+  &--icon-right {
+    #{$b}__wrapper {
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+    }
+    #{$b}__text {
+      display: block;
     }
   }
 }

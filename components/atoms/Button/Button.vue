@@ -1,6 +1,6 @@
 <template>
   <component :is="componentType" :class="classes" class="btn">
-    <span v-if="text" class="btn__text">{{ text }}</span>
+    {{ text }}
   </component>
 </template>
 

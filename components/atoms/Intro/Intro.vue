@@ -2,10 +2,10 @@
   <div class="intro">
     <h2 v-if="title" class="intro__title" v-html="title"></h2>
     <div v-if="titleUpper || titleLower" class="intro__header">
-      <h2 class="intro__title-upper">
+      <h2 v-if="titleUpper" class="intro__title-upper">
         {{ titleUpper }}
       </h2>
-      <h2 class="intro__title-lower">
+      <h2 v-if="titleLower" class="intro__title-lower">
         {{ titleLower }}
       </h2>
     </div>

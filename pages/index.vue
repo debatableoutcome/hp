@@ -421,7 +421,7 @@
             type: 'textarea',
             label: 'Message',
             name: 'message',
-            required: false,
+            required: true,
             placeholder: 'Message',
           },
         },
@@ -433,31 +433,4 @@
       },
     },
   };
-
-  const screenWidth = ref(null);
-
-  const getBreakpoint = (width) => {
-    if (width >= 2100) return 'xxl';
-    if (width >= 1920) return 'xl';
-    if (width >= 990) return 'lg';
-    if (width >= 640) return 'md';
-    return 'sm';
-  };
-
-  const updateScreenSize = () => {
-    screenWidth.value = window.innerWidth;
-    console.log(`Updated screen width: ${screenWidth.value}px`);
-    console.log(`Updated breakpoint: ${getBreakpoint(screenWidth.value)}`);
-  };
-
-  onMounted(async () => {
-    await nextTick();
-    updateScreenSize();
-
-    window.addEventListener('resize', updateScreenSize);
-  });
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', updateScreenSize);
-  });
 </script>

@@ -9,8 +9,9 @@
         />
 
         <div class="form-default__fields-group">
-          <AtomsInput
+          <component
             v-for="(field, index) in fields"
+            :is="field.input.type === 'textarea' ? AtomsTextarea : AtomsInput"
             :key="index"
             :id="field.input.id"
             :type="field.input.type"
@@ -35,8 +36,8 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
-
+  const AtomsTextarea = resolveComponent('AtomsTextarea');
+  const AtomsInput = resolveComponent('AtomsInput');
   const props = defineProps({
     radioButtons: Object,
     fields: Array,

@@ -14,7 +14,10 @@
         v-if="action"
         v-bind="{
           ...action,
-          theme: props.theme === 'black' ? 'white' : props.theme,
+          theme:
+            props.theme === 'gray' || props.theme === 'neon-green'
+              ? 'black'
+              : 'white',
         }"
         class="card-features__action"
       />
@@ -34,7 +37,7 @@
       type: String,
       default: 'gray',
       validator: function (value) {
-        return ['neo-green', 'black'].indexOf(value) !== -1;
+        return ['gray', 'neon-green', 'black'].indexOf(value) !== -1;
       },
     },
     action: {

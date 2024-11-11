@@ -24,14 +24,14 @@
 
 <script setup>
   import { Field, ErrorMessage } from 'vee-validate';
-  import { computed, ref } from 'vue';
+
   import * as Yup from 'yup';
 
   const props = defineProps({
     id: String,
     name: String,
     type: { type: String, default: 'text' },
-    placeholder: { type: String, default: '' },
+    placeholder: { type: String },
     isBlack: { type: Boolean, default: false },
     label: { type: String, default: '' },
     disabled: { type: Boolean, default: false },
