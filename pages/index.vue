@@ -408,7 +408,7 @@
           input: {
             id: '02',
             type: 'email',
-            label: 'E-mail',
+            label: 'Email*',
             name: 'email',
             required: true,
             placeholder: 'Email',
@@ -419,7 +419,7 @@
           input: {
             id: '03',
             type: 'textarea',
-            label: 'Message',
+            label: 'Message*',
             name: 'message',
             required: true,
             placeholder: 'Message',

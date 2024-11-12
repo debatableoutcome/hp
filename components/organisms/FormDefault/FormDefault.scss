@@ -19,10 +19,11 @@
       gap: rem(44);
     }
   }
-  &__form-wrapper {
+  &__btn-container {
     @include media-breakpoint-up(lg) {
-      width: 100%;
-      padding: rem(60) rem(0) rem(40) rem(60);
+      margin-left: rem(30);
+      margin-right: rem(70);
+      height: rem(68);
     }
   }
   &__fields-group {
@@ -31,8 +32,7 @@
     gap: rem(44);
     margin-bottom: rem(8);
     @include media-breakpoint-up(lg) {
-      gap: rem(48);
-      margin-bottom: rem(30);
+      margin-bottom: rem(0);
     }
   }
   &__fields {
@@ -41,6 +41,7 @@
     padding: rem(40) rem(30) rem(40) rem(30);
     margin-bottom: rem(30);
     @include media-breakpoint-up(lg) {
+      padding: rem(60) rem(70) rem(30) rem(30);
       background-color: initial;
       border-radius: initial;
       margin-bottom: initial;
@@ -50,6 +51,7 @@
   &__button {
     @include defaultTransition(background-color);
     @include media-breakpoint-up(lg) {
+      width: 100%;
     }
     &:hover {
       background-color: $color-gray;

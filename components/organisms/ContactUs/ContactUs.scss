@@ -13,8 +13,9 @@
 
   &__form {
     @include media-breakpoint-up(lg) {
-      width: 56%;
+      width: 59.5%;
       padding-bottom: rem(80);
+      margin-left: rem(30);
     }
   }
   &__content {
@@ -29,11 +30,11 @@
     display: none;
     @include media-breakpoint-up(lg) {
       position: absolute;
-      right: rem(-300);
+      display: block;
+      right: rem(-324);
       top: rem(66);
 
-      display: block;
-      width: rem(649);
+      width: rem(685);
       height: rem(648);
     }
   }
