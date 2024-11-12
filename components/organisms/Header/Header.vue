@@ -42,6 +42,14 @@
   function toggleMobileMenu() {
     isMobileMenuOpen.value = !isMobileMenuOpen.value;
   }
+
+  watch(isMobileMenuOpen, (isOpen) => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
 </script>
 
 <style lang="scss">

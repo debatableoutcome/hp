@@ -11,6 +11,8 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   &__nav-icon-container {
@@ -24,21 +26,21 @@
   }
 
   &__nav-wrapper {
-    position: absolute;
-    top: rem(78);
-    left: rem(20);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-
+    height: 100%;
     background-color: $color-white;
-    transform: translateX(150%);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     z-index: 100;
-    @include defaultTransition(transform, opacity);
-
-    border-bottom-right-radius: rem(16);
-    border-bottom-left-radius: rem(16);
+    overflow-y: auto;
 
     &--open {
       transform: translateX(0);
+      top: rem(70);
+      left: rem(20);
     }
 
     @include media-breakpoint-up(lg) {
@@ -50,6 +52,7 @@
       display: flex;
       justify-content: space-between;
       top: initial;
+      overflow: visible;
     }
   }
 
