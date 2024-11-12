@@ -18,7 +18,7 @@
   }
 
   &__wrapper {
-    @include media-breakpoint-only(lg) {
+    @include media-breakpoint-up(lg) {
       padding: rem(70) rem(40) rem(74) rem(40);
     }
   }
