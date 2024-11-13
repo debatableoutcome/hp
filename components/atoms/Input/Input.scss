@@ -33,15 +33,9 @@
     }
   }
   &__label {
-    position: absolute;
-    top: rem(-32);
-    left: 0;
+    display: block;
     color: $color-black;
-
-    @include media-breakpoint-up(lg) {
-      top: rem(-25);
-      left: 0;
-    }
+    margin-bottom: rem(10);
   }
 
   &__error-message {

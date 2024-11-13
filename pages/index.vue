@@ -3,25 +3,25 @@
   <SlidersSliderLogos
     v-if="sliderLogosData"
     v-bind="sliderLogosData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-96"
   />
   <OrganismsListFeatures
     v-if="listFeaturesData"
     v-bind="listFeaturesData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-120"
   />
 
-  <OrganismsCTA v-if="CTAData" v-bind="CTAData" class="mb-56 mb-md-70" />
+  <OrganismsCTA v-if="CTAData" v-bind="CTAData" class="mb-56 mb-md-162" />
 
   <SlidersSliderCases
     v-if="sliderCasesData"
     v-bind="sliderCasesData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-144"
   />
   <OrganismsListAccordeons
     v-if="listAccordeonsData"
     v-bind="listAccordeonsData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-144"
   />
   <OrganismsListTeam
     v-if="listTeamData"
@@ -32,7 +32,7 @@
   <SlidersSliderTestimonials
     v-if="sliderTestimonialsData"
     v-bind="sliderTestimonialsData"
-    class="mb-56 mb-md-104"
+    class="mb-56 mb-md-144"
   />
 
   <OrganismsContactUs
