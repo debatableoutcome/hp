@@ -36,7 +36,6 @@
     @include media-breakpoint-up(lg) {
       justify-content: space-between;
       flex-direction: row;
-      padding-bottom: rem(40);
     }
   }
 
@@ -47,6 +46,7 @@
     gap: rem(16);
     @include media-breakpoint-up(lg) {
       flex-direction: row;
+      padding-top: rem(15);
       gap: rem(40);
     }
   }
@@ -172,9 +172,6 @@
 
   &__form-input label {
     display: none;
-    @include media-breakpoint-up(lg) {
-      display: block;
-    }
   }
 
   &__button-container {

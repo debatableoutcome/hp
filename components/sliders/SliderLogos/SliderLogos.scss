@@ -17,27 +17,24 @@
 
   &__wrapper {
     @include media-breakpoint-up(lg) {
-      max-width: calc(100% - #{rem(18)});
-      width: 100%;
+      width: max-content;
+      width: rem(145);
     }
   }
 
   &__slide {
-    padding: 0 rem(8);
     max-width: 100%;
     @include media-breakpoint-up(lg) {
       max-width: calc(100% / 12 * 2);
-      padding: 0 rem(18);
+
+      padding-right: rem(80);
+      padding-left: 0;
+      margin-right: rem(15);
     }
 
     .card-logo {
       height: 100%;
     }
-  }
-
-  &__card {
-    // $delay: calc(0.4s + var(--item-index) * 0.1s);
-    // @include fadeInChild($delay);
   }
 
   &__pagination {
