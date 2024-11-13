@@ -12,9 +12,8 @@
     }
   }
   &__text {
-    @include text-regular;
     display: none;
-    @include text-header;
+    @include text-button;
     @include media-breakpoint-up(lg) {
       display: block;
     }

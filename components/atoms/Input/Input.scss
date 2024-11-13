@@ -37,7 +37,7 @@
     top: rem(-32);
     left: 0;
     color: $color-black;
-    padding: 0 rem(4);
+
     @include media-breakpoint-up(lg) {
       top: rem(-25);
       left: 0;
