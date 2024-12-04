@@ -1,5 +1,5 @@
 <template>
-  <section class="slider-testimonials">
+  <section class="slider-testimonials" ref="slider">
     <div class="slider-testimonials__container container">
       <AtomsIntro
         v-if="header"
@@ -22,15 +22,14 @@
           </div>
         </div>
 
-        <AtomsNavigation
-          :prevIcon="'arrow-left'"
-          :nextIcon="'arrow-right'"
-          :showArrows="true"
-          :showBullets="true"
-          :iconBullet="'bullet'"
-          ref="pagination"
-          class="slider-testimonials__pagination"
-        />
+        <div style="display: flex; justify-content: center;">
+          <AtomsNavigation
+            ref="navigation"
+            :prevIcon="'arrow-left'"
+            :nextIcon="'arrow-right'"
+            class="slider-testimonials__pagination"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -51,22 +50,26 @@
 
   const slider = ref(null);
   const swiper = ref(null);
+  const navigation = ref(null);
 
   function initSlider() {
+    const prev = slider.value.querySelector('.navigation__arrow--prev');
+    const next = slider.value.querySelector('.navigation__arrow--next');
+
     slider.value = new Swiper(swiper.value, {
       modules: [Pagination, Navigation],
       slidesPerView: 'auto',
       simulateTouch: false,
       pagination: {
-        el: '.slider-testimonials__pagination .swiper-pagination',
+        el: '.slider-testimonials__pagination .navigation__bullets',
         clickable: true,
         renderBullet: function (index, className) {
           return `<span class="${className} custom-bullet"></span>`;
         },
       },
       navigation: {
-        nextEl: '.slider-testimonials__pagination .swiper-button-next',
-        prevEl: '.slider-testimonials__pagination .swiper-button-prev',
+        nextEl: next,
+        prevEl: prev,
       },
     });
   }

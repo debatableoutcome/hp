@@ -1,8 +1,9 @@
 .navigation {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+
   &__icon {
     width: rem(24);
     height: rem(24);
@@ -17,13 +18,20 @@
       width: rem(24);
     }
   }
+
   &__arrow--prev,
   &__arrow--next {
+    display: flex;
     background: none;
     border: none;
     color: transparent;
     width: auto;
-    height: auto;
+    margin-top: auto !important;
+    height: auto !important;
+
+    &::after {
+      display: none;
+    }
   }
 
   &__bullets {
@@ -31,6 +39,7 @@
     gap: rem(3);
     justify-content: center;
     width: 100%;
+    margin: 0 rem(189);
   }
 
   .custom-bullet {
@@ -42,7 +51,7 @@
     cursor: pointer;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 100%;
@@ -69,7 +78,7 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    width: rem(50);
+    cursor: pointer;
     color: transparent;
     cursor: pointer;
   }

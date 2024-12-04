@@ -49,12 +49,5 @@
   &__pagination {
     position: relative;
     margin-top: rem(40);
-    margin-bottom: rem(60);
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    @include media-breakpoint-up(lg) {
-      margin-top: rem(112);
-    }
   }
 }
