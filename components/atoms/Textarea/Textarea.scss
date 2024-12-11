@@ -1,0 +1,86 @@
+.textarea {
+  $b: &;
+
+  width: 100%;
+  margin-bottom: rem(10);
+  height: rem(140);
+
+  @include media-breakpoint-up(lg) {
+    height: rem(190);
+  }
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    @include p-card;
+    padding: rem(17) rem(19);
+    border-radius: rem(10);
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-black;
+    outline: none;
+    resize: vertical;
+    @include defaultTransition(border-color);
+    resize: none;
+
+    @include media-breakpoint-up(lg) {
+      height: rem(192);
+      padding: rem(17) rem(29);
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $color-black;
+    margin-bottom: rem(10);
+  }
+
+  &__error-message {
+    color: $color-red;
+    margin-top: rem(4);
+    height: rem(24);
+    padding-left: rem(8);
+    display: flex;
+    align-items: center;
+  }
+
+  &--error {
+    #{$b}__input {
+      border-color: $color-red;
+    }
+
+    #{$b}__label {
+      color: $color-red;
+
+      &:after {
+        display: block;
+        content: '';
+        width: rem(6);
+        height: rem(6);
+        background: $color-red;
+        position: absolute;
+        right: rem(-16);
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &--focused {
+    #{$b}__input {
+      border-color: $color-black;
+    }
+  }
+
+  &--filled #{$b}__input {
+    border-color: $color-gray;
+  }
+
+  &--focused #{$b}__input {
+    border-color: $color-black;
+  }
+}

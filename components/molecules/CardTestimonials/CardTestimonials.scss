@@ -1,0 +1,92 @@
+.card-testimonials {
+  $root: &;
+
+  padding: rem(30) rem(35);
+  background-color: $color-black;
+  border-radius: rem(8);
+  overflow: hidden;
+  @include media-breakpoint-up(lg) {
+    padding: rem(20);
+  }
+  &__frame {
+    position: relative;
+    padding: rem(30);
+    border-radius: rem(40);
+    border: solid 1px $color-neon-green;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      padding: rem(48) rem(52);
+      border-radius: rem(40);
+      border: solid 1px $color-neon-green;
+    }
+  }
+  &__frame::before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 45px;
+    width: 0;
+    height: 0;
+    border-left: rem(30) solid transparent;
+    border-right: rem(30) solid transparent;
+    border-top: rem(30) solid $color-black;
+    z-index: 2;
+    @include media-breakpoint-up(lg) {
+      content: '';
+      position: absolute;
+      bottom: -28px;
+      left: 54px;
+      width: 0;
+      height: 0;
+      border-left: rem(30) solid transparent;
+      border-right: rem(30) solid transparent;
+      border-top: rem(30) solid $color-black;
+      z-index: 2;
+    }
+  }
+
+  &__frame::after {
+    content: '';
+    position: absolute;
+    bottom: -27px;
+    left: 44px;
+    width: 0;
+    height: 0;
+    border-left: rem(30) solid transparent;
+    border-right: rem(30) solid transparent;
+    border-top: rem(30) solid $color-neon-green;
+    z-index: 1;
+    @include media-breakpoint-up(lg) {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 54px;
+      width: 0;
+      height: 0;
+      border-left: rem(30) solid transparent;
+      border-right: rem(30) solid transparent;
+      border-top: rem(30) solid $color-neon-green;
+      z-index: 1;
+    }
+  }
+  &__info {
+    margin-top: rem(50);
+    margin-left: rem(80);
+  }
+  &__text,
+  &__position {
+    @include p-card;
+  }
+
+  &__name {
+    @include p;
+    color: $color-neon-green;
+  }
+  &__text,
+  &__name,
+  &__position {
+    position: relative;
+    z-index: 2;
+    color: $color-white;
+  }
+}

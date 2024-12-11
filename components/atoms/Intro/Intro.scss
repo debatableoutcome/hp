@@ -1,0 +1,58 @@
+.intro {
+  $b: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__title {
+    @include h2;
+    @include highlighted;
+    width: auto;
+    display: inline-block;
+
+    align-self: center;
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      margin-right: rem(40);
+    }
+  }
+  &__title-upper,
+  &__title-lower {
+    @include h3;
+    @include highlighted;
+    display: inline-block;
+  }
+
+  &--two-lines {
+    @include media-breakpoint-up(lg) {
+      #{$b}__title-upper {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      #{$b}__title-lower {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &__text {
+    @include p;
+    text-align: center;
+    width: 90%;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      width: 50%;
+      align-self: flex-start;
+      margin-top: rem(2);
+    }
+  }
+}

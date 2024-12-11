@@ -1,0 +1,26 @@
+.card-logos {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    width: rem(200);
+    height: rem(200);
+    filter: grayscale(100%);
+    @include media-breakpoint-up(lg) {
+      width: rem(145);
+      height: rem(130);
+      margin-bottom: rem(80);
+    }
+  }
+}

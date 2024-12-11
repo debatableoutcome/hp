@@ -1,0 +1,42 @@
+.list-team {
+  &__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: rem(30);
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: rem(40) rem(40);
+    }
+  }
+  &__header {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(80);
+    }
+  }
+  &__card {
+    @include media-breakpoint-up(lg) {
+      width: calc((100% / 3) - 30px);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button-container {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: rem(270);
+    }
+  }
+  &__toggle-button {
+    margin-top: rem(40);
+  }
+}

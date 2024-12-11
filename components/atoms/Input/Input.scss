@@ -1,0 +1,55 @@
+.input {
+  $b: &;
+  position: relative;
+  margin-bottom: rem(10);
+
+  &--error#{$b}__field {
+    border-color: $color-red;
+  }
+
+  &--filled #{$b}__field {
+    border-color: $color-gray;
+  }
+
+  &--focused #{$b}__field {
+    border-color: $color-black;
+  }
+
+  &__field {
+    width: 100%;
+    outline: none;
+    border: 1px $color-black solid;
+    border-radius: rem(10);
+    padding: rem(17) rem(19);
+    background-color: $color-white;
+    @include p-card;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(17) rem(29);
+    }
+  }
+  &__label {
+    display: block;
+    color: $color-black;
+    margin-bottom: rem(10);
+  }
+
+  &__error-message {
+    margin-top: rem(4);
+  }
+
+  &--black {
+    #{$b}__field {
+      color: $color-white;
+      caret-color: $color-white;
+      background-color: $color-black-alternative;
+
+      &::placeholder {
+        color: rgba($color-white, 0.6);
+      }
+    }
+    #{$b}__label {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+$base-value: 16 !default;
+
+@function rem($size) {
+  $remSize: calc($size / $base-value * 1rem);
+  @return $remSize;
+}

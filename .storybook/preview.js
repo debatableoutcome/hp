@@ -1,30 +1,30 @@
 const customViewports = {
   mobile: {
-    name: "Mobile",
+    name: 'Mobile',
     styles: {
-      width: "360px",
-      height: "960px",
+      width: '360px',
+      height: '960px',
     },
   },
   tablet: {
-    name: "Tablet",
+    name: 'Tablet',
     styles: {
-      width: "768px",
-      height: "1024px",
+      width: '768px',
+      height: '1024px',
     },
   },
   desktop: {
-    name: "Desktop",
+    name: 'Desktop',
     styles: {
-      width: "1440px",
-      height: "1080px",
+      width: '1440px',
+      height: '1080px',
     },
   },
   fullHD: {
-    name: "fullHD",
+    name: 'fullHD',
     styles: {
-      width: "1920px",
-      height: "1080px",
+      width: '1920px',
+      height: '1080px',
     },
   },
 };
@@ -33,21 +33,17 @@ const customViewports = {
 const preview = {
   parameters: {
     backgrounds: {
-      default: "white",
+      default: 'white',
       values: [
         {
-          name: "white",
-          value: "#fff",
-        },
-        {
-          name: "darkteal",
-          value: "#00313C",
+          name: 'white',
+          value: '#fff',
         },
       ],
     },
     viewport: {
       viewports: customViewports,
-      defaultViewport: "desktop",
+      defaultViewport: 'desktop',
     },
     controls: {
       matchers: {

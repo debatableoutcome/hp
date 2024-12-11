@@ -14,8 +14,15 @@
   "dependencies": {
     "@nuxtjs/storybook": "^8.1.5",
     "@vitejs/plugin-vue": "^5.1.2",
+    "focus-visible": "^5.2.1",
     "nuxt": "^3.12.4",
-    "sass": "^1.77.8",
-    "vue": "latest"
+    "sass": "^1.80.2",
+    "swiper": "^11.1.3",
+    "vee-validate": "^4.14.6",
+    "vue": "latest",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "vite-svg-loader": "^5.1.0"
   }
 }

@@ -1,0 +1,53 @@
+@import 'swiper/css/bundle';
+
+.slider-logos {
+  $root: &;
+
+  &__container {
+  }
+  &__swiper {
+    margin-left: rem(-8);
+    margin-right: rem(-8);
+
+    @include media-breakpoint-up(lg) {
+      margin-left: rem(-18);
+      margin-right: rem(-18);
+    }
+  }
+
+  &__wrapper {
+    @include media-breakpoint-up(lg) {
+      width: max-content;
+      width: rem(145);
+    }
+  }
+
+  &__slide {
+    max-width: 100%;
+    @include media-breakpoint-up(lg) {
+      max-width: calc(100% / 12 * 2);
+
+      padding-right: rem(80);
+      padding-left: 0;
+      margin-right: rem(15);
+    }
+
+    .card-logo {
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: rem(32);
+    display: flex;
+    justify-content: center;
+    .swiper-pagination {
+      position: static;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}

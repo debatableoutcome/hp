@@ -1,0 +1,53 @@
+@import 'swiper/css/bundle';
+
+.slider-testimonials {
+  $root: &;
+
+  &__header {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__swiper {
+    border: 1px solid $color-black;
+    border-radius: rem(40);
+    background-color: $color-black;
+    @include media-breakpoint-up(lg) {
+      padding: rem(70) rem(40) rem(72) rem(40);
+    }
+  }
+
+  &__wrapper {
+    @include media-breakpoint-only(lg) {
+      // max-width: calc(100% - #{rem(18)});
+      // width: 100%;
+    }
+  }
+
+  &__slide {
+    max-width: 100%;
+    background-color: $color-black;
+    border-radius: rem(40);
+    margin-right: rem(0);
+
+    @include media-breakpoint-up(lg) {
+      max-width: initial;
+      border-radius: initial;
+
+      width: 57%;
+      padding-left: rem(20);
+    }
+  }
+
+  &__card {
+    // $delay: calc(0.4s + var(--item-index) * 0.1s);
+    // @include fadeInChild($delay);
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: rem(40);
+  }
+}

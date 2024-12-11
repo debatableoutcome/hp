@@ -1,0 +1,182 @@
+.footer {
+  &__container {
+    @include base-container;
+  }
+  &__content {
+    color: $color-white;
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: rem(50) rem(20) rem(30) rem(20);
+    @include media-breakpoint-up(lg) {
+      border-top-left-radius: rem(45);
+      border-top-right-radius: rem(45);
+      padding: rem(55) rem(60) rem(50) rem(60);
+    }
+  }
+  &__top-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: rem(55);
+    }
+  }
+  &__middle-row {
+    border-bottom: 1px solid #eee;
+    margin-bottom: rem(40);
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__bottom-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(16);
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      padding-top: rem(15);
+      gap: rem(40);
+    }
+  }
+  &__social-desktop {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      gap: rem(20);
+    }
+  }
+  &__social-mob {
+    display: flex;
+    gap: rem(20);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: rem(40);
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  &__logo span {
+    width: rem(150);
+    height: rem(34);
+    margin-bottom: rem(38);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      width: rem(180);
+      height: rem(34);
+    }
+  }
+  &__social-link span {
+    width: rem(30);
+    height: rem(30);
+  }
+  &__links {
+    @include p-card;
+    a {
+      @include link-reset;
+    }
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: rem(16);
+    @include media-breakpoint-up(lg) {
+      text-align: initial;
+      flex-direction: row;
+      gap: rem(40);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    @include p;
+
+    @include media-breakpoint-up(lg) {
+      gap: rem(22);
+    }
+  }
+  &__contact-us {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: rem(80);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(0);
+      text-align: initial;
+      width: 44%;
+    }
+  }
+  &__contact-us-title {
+    @include highlighted;
+    @include h4;
+    display: flex;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-right: initial;
+      margin-left: initial;
+      text-align: initial;
+      margin-bottom: rem(27);
+    }
+  }
+  &__text {
+    @include p;
+    a {
+      @include link-reset;
+    }
+  }
+  &__form {
+    background-color: $color-black-alternative;
+    border-radius: rem(14);
+    display: flex;
+    flex-direction: column;
+    padding: rem(30);
+    width: 100%;
+    margin-bottom: rem(40);
+    gap: rem(20);
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: rem(20);
+      width: 56%;
+      padding: rem(58) rem(30);
+    }
+  }
+  &__form-input {
+    @include media-breakpoint-up(lg) {
+      width: 51%;
+    }
+  }
+  &__form-input input {
+    height: rem(66);
+
+    @include media-breakpoint-up(lg) {
+      height: rem(67);
+    }
+  }
+
+  &__form-input label {
+    display: none;
+  }
+
+  &__button-container {
+    @include media-breakpoint-up(lg) {
+      width: 45%;
+    }
+  }
+}

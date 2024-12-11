@@ -1,0 +1,85 @@
+<template>
+  <span v-if="icon && svgHtml" :class="classes" v-html="svgHtml"></span>
+  <span v-else-if="icon && !svgHtml" :class="classes">
+    <IconAmazon v-if="icon === 'logo-amazon'" />
+    <IconDribble v-if="icon === 'logo-dribble'" />
+    <IconHubspot v-if="icon === 'logo-hubspot'" />
+    <IconNotion v-if="icon === 'logo-notion'" />
+    <IconNetflix v-if="icon === 'logo-netflix'" />
+    <IconZoom v-if="icon === 'logo-zoom'" />
+    <IconArrowUpRight v-if="icon === 'arrow-up-right'" />
+    <IconRoundArrowUpRight v-if="icon === 'round-arrow-up-right'" />
+    <IconRoundArrowUpRightWhite v-if="icon === 'round-arrow-up-right-white'" />
+    <IconAccordeonClosed v-if="icon === 'accordeon-closed'" />
+    <IconAccordeonOpen v-if="icon === 'accordeon-open'" />
+    <IconLinkedin v-if="icon === 'linkedin'" />
+    <IconArrowLeft v-if="icon === 'arrow-left'" />
+    <IconArrowRight v-if="icon === 'arrow-right'" />
+    <IconBullet v-if="icon === 'bullet'" />
+    <IconLogoWhite v-if="icon === 'logo-white'" />
+    <IconLinkedinWhite v-if="icon === 'linkedin-white'" />
+    <IconFBWhite v-if="icon === 'fb-white'" />
+    <IconTwitterWhite v-if="icon === 'twitter-white'" />
+  </span>
+  <span v-else :class="classes">
+    <slot></slot>
+  </span>
+</template>
+
+<script setup>
+  import IconAmazon from '@/assets/icons/logo-amazon.svg';
+  import IconDribble from '@/assets/icons/logo-dribble.svg';
+  import IconHubspot from '@/assets/icons/logo-hubspot.svg';
+  import IconNotion from '@/assets/icons/logo-notion.svg';
+  import IconNetflix from '@/assets/icons/logo-netflix.svg';
+  import IconZoom from '@/assets/icons/logo-zoom.svg';
+  import IconArrowUpRight from '@/assets/icons/arrow-up-right.svg';
+  import IconRoundArrowUpRight from '@/assets/icons/round-arrow-up-right.svg';
+  import IconRoundArrowUpRightWhite from '@/assets/icons/round-arrow-up-right-white.svg';
+  import IconAccordeonClosed from '@/assets/icons/accordeon-closed.svg';
+  import IconAccordeonOpen from '@/assets/icons/accordeon-open.svg';
+  import IconLinkedin from '@/assets/icons/linkedin.svg';
+  import IconArrowLeft from '@/assets/icons/arrow-left.svg';
+  import IconArrowRight from '@/assets/icons/arrow-right.svg';
+  import IconBullet from '@/assets/icons/bullet.svg';
+  import IconLogoWhite from '@/assets/icons/logo-white.svg';
+  import IconLinkedinWhite from '@/assets/icons/linkedin-white.svg';
+  import IconFBWhite from '@/assets/icons/fb-white.svg';
+  import IconTwitterWhite from '@/assets/icons/twitter-white.svg';
+
+  const props = defineProps({
+    icon: String,
+    size: String,
+  });
+
+  const svgHtml = ref(null);
+
+  const classes = computed(() => ({
+    icon: true,
+    [`icon--${props.size}`]: props.size,
+  }));
+
+  const isLink = computed(() => props.icon && props.icon.includes('http'));
+
+  const getSVGHtml = async () => {
+    if (isLink.value) {
+      svgHtml.value = await fetch(props.icon).then((res) => res.text());
+    }
+  };
+
+  watchEffect(() => {
+    if (isLink.value) {
+      getSVGHtml();
+    }
+  });
+
+  onMounted(() => {
+    if (isLink.value) {
+      getSVGHtml();
+    }
+  });
+</script>
+
+<style lang="scss">
+  @import 'Icon';
+</style>

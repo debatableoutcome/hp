@@ -1,0 +1,10 @@
+@mixin base-container {
+  width: 100%;
+  max-width: $grid-max-width;
+  margin: 0 auto;
+  padding: 0 rem($wrapper-gutter-sm);
+
+  @include media-breakpoint-up(md) {
+    padding: 0 rem($wrapper-gutter-lg);
+  }
+}

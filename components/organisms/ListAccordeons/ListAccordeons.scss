@@ -1,0 +1,32 @@
+.list-accordeons {
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(30);
+    gap: rem(30);
+    .intro__header {
+      max-width: 70%;
+      text-align: center;
+      .intro__title-upper,
+      .intro__title-lower {
+        @include h2;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+      max-width: 100%;
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @include media-breakpoint-up(lg) {
+      gap: rem(30);
+      margin-bottom: rem(80);
+    }
+  }
+}

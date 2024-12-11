@@ -1,0 +1,8 @@
+@import 'swiper/css/bundle';
+
+.swiper-pagination {
+  display: flex;
+  gap: 0 rem(8);
+  bottom: auto !important;
+  top: auto !important;
+}

@@ -1,0 +1,60 @@
+.form-default {
+  &__form {
+    @include media-breakpoint-up(lg) {
+      // padding-left: rem(40);
+      // padding-right: rem(40);
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: rem(78);
+    gap: rem(70);
+    padding-left: rem(30);
+    justify-content: flex-start;
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      margin-bottom: rem(70);
+      gap: rem(44);
+    }
+  }
+  &__btn-container {
+    @include media-breakpoint-up(lg) {
+      margin-left: rem(30);
+      margin-right: rem(70);
+      height: rem(68);
+    }
+  }
+  &__fields-group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(44);
+    margin-bottom: rem(8);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(0);
+    }
+  }
+  &__fields {
+    background-color: $color-gray;
+    border-radius: rem(45);
+    // padding: rem(40) rem(30) rem(40) rem(30);
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      // padding: rem(60) rem(70) rem(30) rem(30);
+      background-color: initial;
+      border-radius: initial;
+      margin-bottom: initial;
+    }
+  }
+
+  &__button {
+    @include defaultTransition(background-color);
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+}
