@@ -4,8 +4,7 @@
   width: 100%;
   margin-bottom: rem(10);
   height: rem(140);
-  resize: vertical;
-  @include p;
+
   @include media-breakpoint-up(lg) {
     height: rem(190);
   }
@@ -16,7 +15,7 @@
   &__input {
     width: 100%;
     @include p-card;
-    padding: rem(20);
+    padding: rem(17) rem(19);
     border-radius: rem(10);
     background-color: $color-white;
     color: $color-black;
@@ -24,29 +23,18 @@
     outline: none;
     resize: vertical;
     @include defaultTransition(border-color);
-
-    &::placeholder {
-      position: absolute;
-      top: rem(20);
-      left: rem(29);
-    }
+    resize: none;
 
     @include media-breakpoint-up(lg) {
       height: rem(192);
+      padding: rem(17) rem(29);
     }
   }
 
   &__label {
-    position: absolute;
-    top: rem(-32);
-    left: 0;
+    display: block;
     color: $color-black;
-    padding: 0 rem(4);
-
-    @include media-breakpoint-up(lg) {
-      top: rem(-25);
-      left: 0;
-    }
+    margin-bottom: rem(10);
   }
 
   &__error-message {
@@ -88,12 +76,11 @@
     }
   }
 
-  &--filled {
-    #{$b}__label {
-      top: rem(-10);
-      left: rem(8);
+  &--filled #{$b}__input {
+    border-color: $color-gray;
+  }
 
-      color: $color-gray;
-    }
+  &--focused #{$b}__input {
+    border-color: $color-black;
   }
 }

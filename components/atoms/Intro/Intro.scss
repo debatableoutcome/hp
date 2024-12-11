@@ -1,4 +1,5 @@
 .intro {
+  $b: &;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +28,20 @@
     @include h3;
     @include highlighted;
     display: inline-block;
+  }
+
+  &--two-lines {
+    @include media-breakpoint-up(lg) {
+      #{$b}__title-upper {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      #{$b}__title-lower {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
   }
 
   &__text {

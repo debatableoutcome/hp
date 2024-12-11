@@ -1,8 +1,8 @@
 .form-default {
   &__form {
     @include media-breakpoint-up(lg) {
-      padding-left: rem(40);
-      padding-right: rem(40);
+      // padding-left: rem(40);
+      // padding-right: rem(40);
     }
   }
 
@@ -38,10 +38,10 @@
   &__fields {
     background-color: $color-gray;
     border-radius: rem(45);
-    padding: rem(40) rem(30) rem(40) rem(30);
+    // padding: rem(40) rem(30) rem(40) rem(30);
     margin-bottom: rem(30);
     @include media-breakpoint-up(lg) {
-      padding: rem(60) rem(70) rem(30) rem(30);
+      // padding: rem(60) rem(70) rem(30) rem(30);
       background-color: initial;
       border-radius: initial;
       margin-bottom: initial;

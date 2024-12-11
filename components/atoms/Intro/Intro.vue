@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div :class="classes">
     <h2 v-if="title" class="intro__title" v-html="title"></h2>
     <div v-if="titleUpper || titleLower" class="intro__header">
       <h2 v-if="titleUpper" class="intro__title-upper">
@@ -27,6 +27,13 @@
     text: {
       type: String,
     },
+  });
+
+  const classes = computed(() => {
+    return {
+      intro: true,
+      [`intro--two-lines`]: props.titleUpper && props.titleLower,
+    };
   });
 </script>
 

@@ -6,30 +6,26 @@
   &--error#{$b}__field {
     border-color: $color-red;
   }
-  &--focused#{$b}__field {
-    // border-color: $color-black;
-  }
-  &--filled#{$b}__field {
-    // border-color: $color-gray;
+
+  &--filled #{$b}__field {
+    border-color: $color-gray;
   }
 
-  &__input {
-    width: 100%;
-    padding: rem(12);
+  &--focused #{$b}__field {
+    border-color: $color-black;
   }
+
   &__field {
     width: 100%;
     outline: none;
     border: 1px $color-black solid;
     border-radius: rem(10);
-    padding: rem(15);
+    padding: rem(17) rem(19);
     background-color: $color-white;
     @include p-card;
 
-    &::placeholder {
-      position: absolute;
-      top: rem(20);
-      left: rem(29);
+    @include media-breakpoint-up(lg) {
+      padding: rem(17) rem(29);
     }
   }
   &__label {
@@ -44,18 +40,16 @@
 
   &--black {
     #{$b}__field {
+      color: $color-white;
+      caret-color: $color-white;
       background-color: $color-black-alternative;
+
+      &::placeholder {
+        color: rgba($color-white, 0.6);
+      }
     }
     #{$b}__label {
       color: $color-white;
-    }
-    #{$b}__input {
-      color: $color-white;
-      caret-color: $color-white;
-
-      // &::placeholder {
-      //   color: rgba($color-white, 0.6);
-      // }
     }
   }
 }

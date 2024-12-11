@@ -14,8 +14,8 @@
   &__form {
     @include media-breakpoint-up(lg) {
       width: 59.5%;
-      padding-bottom: rem(80);
-      margin-left: rem(30);
+      // padding-bottom: rem(80);
+      // margin-left: rem(30);
     }
   }
   &__content {
@@ -23,6 +23,7 @@
       background-color: $color-gray;
       border-radius: rem(45);
       position: relative;
+      padding: rem(60) rem(100) rem(80);
     }
   }
 
